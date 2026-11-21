@@ -233,7 +233,7 @@ def parse_preferences_rules(text: str) -> ParsedPreferences:
         cuisines=cuisines, dietary_restrictions=diets, ambiences=ambiences, origin_neighborhood=hood,
         max_distance_km=float(km.group(1)) if km else None,
         max_budget=float(money.group(1) or money.group(2)) if money else None,
-        budget_hint=hint, additional_preferences=text.strip()[:120],
+        budget_hint=hint, additional_preferences="",
     )
 
 

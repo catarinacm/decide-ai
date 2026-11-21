@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #EA1D2C;
+  --color-brand-dark: #C4111E;
+  --color-brand-soft: #FDECEE;
+  --color-ink: #1F1F1F;
+  --color-muted: #6B6B6B;
+  --color-line: #ECECEC;
+  --color-canvas: #F7F7F7;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html, body, #root { min-height: 100%; }
+body { @apply bg-canvas text-ink antialiased; }
+
+@utility card {
+  @apply bg-white rounded-2xl border border-line shadow-[0_1px_2px_rgba(0,0,0,0.04)];
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold transition
+    disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand;
+}
+@utility btn-primary {
+  @apply btn bg-brand text-white hover:bg-brand-dark;
+}
+@utility btn-secondary {
+  @apply btn bg-white text-brand border border-brand hover:bg-brand-soft;
+}
+@utility btn-ghost {
+  @apply btn text-ink hover:bg-canvas px-3 py-2;
+}
+@utility input {
+  @apply w-full rounded-xl border border-line bg-white px-3 py-3 text-base outline-none
+    focus:border-brand focus:ring-2 focus:ring-brand/20 disabled:bg-canvas;
+}
+@utility label {
+  @apply block text-sm font-semibold mb-1.5;
+}
+@utility chip {
+  @apply inline-flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm font-medium transition select-none;
+}

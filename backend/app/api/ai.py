@@ -16,6 +16,14 @@ from app.services.events import log_event
 router = APIRouter(tags=["ia"])
 
 
+def _message(result) -> str:
+    if result.source == "ia":
+        return "Preenchemos o formulário com o que entendemos. Confira e corrija antes de salvar."
+    if result.error == "ia_desativada":
+        return "A IA está desligada neste ambiente; preenchemos por palavras-chave. Confira antes de salvar."
+    return "A IA não respondeu desta vez; preenchemos por palavras-chave. Confira antes de salvar."
+
+
 @router.post("/ai/parse-preferences")
 @limiter.limit(AI_LIMIT)
 def parse_preferences(request: Request, body: ParseIn, participant: ParticipantRow = Depends(current_participant),
@@ -27,7 +35,5 @@ def parse_preferences(request: Request, body: ParseIn, participant: ParticipantR
     return {
         "preferences": result.data.model_dump(),
         "source": result.source,
-        "message": ("Preenchemos o formulário com o que entendemos. Confira e corrija antes de salvar."
-                    if result.source == "ia" else
-                    "A IA não respondeu a tempo; preenchemos por palavras-chave. Confira antes de salvar."),
+        "message": _message(result),
     }

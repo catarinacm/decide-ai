@@ -37,10 +37,10 @@ DEFAULT_MAX_DISTANCE_KM = 10.0
 
 FILTERS = ("orcamento", "restricoes", "capacidade", "horario")
 FILTER_LABELS = {
-    "orcamento": "preço acima do orçamento",
-    "restricoes": "não atende uma restrição alimentar obrigatória",
-    "capacidade": "não comporta o grupo",
-    "horario": "fechado ou sem mesa na data e horário",
+    "orcamento": "preço acima do teto",
+    "restricoes": "não atender a uma restrição alimentar obrigatória",
+    "capacidade": "não comportar o grupo",
+    "horario": "estar fechado ou sem mesa na data e horário",
 }
 
 
@@ -352,6 +352,10 @@ def rank(restaurants: list[Restaurant], participants: list[ParticipantPrefs], gr
 
 # -------------------------------------------------- sugestões de ajuste
 
+def _appear(n: int) -> str:
+    return "surge 1 opção" if n == 1 else f"surgem {n} opções"
+
+
 def _round_up(x: float, step: int = 5) -> int:
     return int(math.ceil(x / step) * step)
 
@@ -373,7 +377,7 @@ def suggestions(restaurants: list[Restaurant], participants: list[ParticipantPre
         n = sum(1 for r in only_budget if r.avg_price <= new_budget)
         who = "o orçamento por pessoa" if budget_source == "grupo" else f"o limite de {budget_source}"
         out.append({"type": "orcamento", "value": new_budget, "count": n,
-                    "message": f"Subindo {who} de R$ {budget:.0f} para R$ {new_budget}, surgem {n} opç{'ão' if n == 1 else 'ões'}."})
+                    "message": f"Subindo {who} de R$ {budget:.0f} para R$ {new_budget}, {_appear(n)}."})
 
     # 2. Restrições: não sugerimos remover, só mostramos o peso de cada uma para o grupo confirmar.
     for diet in sorted(diets):
@@ -384,7 +388,7 @@ def suggestions(restaurants: list[Restaurant], participants: list[ParticipantPre
             owners = [p.nickname for p in participants if diet in p.dietary_restrictions]
             out.append({"type": "restricoes", "value": diet, "count": n,
                         "message": (f"A restrição '{diet_label(diet)}' ({_join(owners)}) é a que mais limita: "
-                                    f"sem ela haveria {n} opç{'ão' if n == 1 else 'ões'}. Só altere se ela não for obrigatória.")})
+                                    f"sem ela haveria {n} {'opção' if n == 1 else 'opções'}. Só altere se ela não for obrigatória.")})
 
     # 3. Capacidade
     only_cap = [r for r in restaurants if fails[r.id] == ["capacidade"]]
@@ -392,7 +396,7 @@ def suggestions(restaurants: list[Restaurant], participants: list[ParticipantPre
         best = max(r.capacity for r in only_cap)
         n = sum(1 for r in only_cap if r.capacity >= best)
         out.append({"type": "capacidade", "value": best, "count": n,
-                    "message": f"Com grupos de até {best} pessoas, surgem {n} opç{'ão' if n == 1 else 'ões'}."})
+                    "message": f"Com grupos de até {best} pessoas, {_appear(n)}."})
 
     # 4. Horário no mesmo dia (de 30 em 30 min, do mais próximo para o mais distante)
     def eligible_at(day: date, hhmm: str) -> int:
@@ -406,7 +410,7 @@ def suggestions(restaurants: list[Restaurant], participants: list[ParticipantPre
         n = eligible_at(d, hhmm)
         if n:
             out.append({"type": "horario", "value": hhmm, "count": n,
-                        "message": f"No mesmo dia, às {hhmm}, surgem {n} opç{'ão' if n == 1 else 'ões'}."})
+                        "message": f"No mesmo dia, às {hhmm}, {_appear(n)}."})
             break
 
     # 5. Outro dia, mesmo horário (próximos 7 dias)
@@ -416,7 +420,7 @@ def suggestions(restaurants: list[Restaurant], participants: list[ParticipantPre
         if n:
             label = WEEKDAY_LABELS[weekday_key(day)]
             out.append({"type": "data", "value": day.isoformat(), "count": n,
-                        "message": f"Em {day.strftime('%d/%m')} ({label}), às {t}, surgem {n} opç{'ão' if n == 1 else 'ões'}."})
+                        "message": f"Em {day.strftime('%d/%m')} ({label}), às {t}, {_appear(n)}."})
             break
 
     out.sort(key=lambda s: -s["count"])
