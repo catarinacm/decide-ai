@@ -1,0 +1,69 @@
+{
+  "_comment": "Valores permitidos e referências geográficas. Fonte única para o seed, o validador, o backend e a IA. Coordenadas são centróides aproximados dos bairros (dados públicos de geografia), sem nenhum dado de estabelecimento real.",
+  "cuisines": {
+    "brasileira":    {"label": "Brasileira",       "price_min": 35,  "price_max": 110},
+    "nordestina":    {"label": "Nordestina",       "price_min": 40,  "price_max": 110},
+    "italiana":      {"label": "Italiana",         "price_min": 60,  "price_max": 180},
+    "pizzaria":      {"label": "Pizzaria",         "price_min": 40,  "price_max": 110},
+    "japonesa":      {"label": "Japonesa",         "price_min": 50,  "price_max": 250},
+    "chinesa":       {"label": "Chinesa",          "price_min": 40,  "price_max": 120},
+    "coreana":       {"label": "Coreana",          "price_min": 55,  "price_max": 140},
+    "tailandesa":    {"label": "Tailandesa",       "price_min": 60,  "price_max": 140},
+    "indiana":       {"label": "Indiana",          "price_min": 50,  "price_max": 140},
+    "arabe":         {"label": "Árabe",            "price_min": 35,  "price_max": 100},
+    "mexicana":      {"label": "Mexicana",         "price_min": 45,  "price_max": 110},
+    "peruana":       {"label": "Peruana",          "price_min": 80,  "price_max": 200},
+    "francesa":      {"label": "Francesa",         "price_min": 110, "price_max": 250},
+    "portuguesa":    {"label": "Portuguesa",       "price_min": 90,  "price_max": 200},
+    "carnes":        {"label": "Carnes",           "price_min": 90,  "price_max": 250},
+    "frutos_do_mar": {"label": "Frutos do mar",    "price_min": 90,  "price_max": 220},
+    "vegetariana":   {"label": "Vegetariana",      "price_min": 40,  "price_max": 110},
+    "hamburgueria":  {"label": "Hamburgueria",     "price_min": 35,  "price_max": 85},
+    "cafe_bistro":   {"label": "Café e bistrô",    "price_min": 35,  "price_max": 90}
+  },
+  "dietary_options": {
+    "vegetariana": "Vegetariana",
+    "vegana": "Vegana",
+    "sem_gluten": "Sem glúten",
+    "sem_lactose": "Sem lactose"
+  },
+  "ambiences": {
+    "tranquilo": "Tranquilo",
+    "casual": "Casual",
+    "animado": "Animado",
+    "romantico": "Romântico",
+    "ao_ar_livre": "Ao ar livre"
+  },
+  "incompatible_ambiences": [["tranquilo", "animado"]],
+  "weekdays": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+  "occasions": {
+    "aniversario": "Aniversário",
+    "happy_hour": "Happy hour",
+    "jantar_amigos": "Jantar entre amigos",
+    "almoco_trabalho": "Almoço de trabalho",
+    "familia": "Encontro de família",
+    "outro": "Outro"
+  },
+  "neighborhoods": {
+    "Pinheiros":     {"lat": -23.5670, "lng": -46.6930},
+    "Vila Madalena": {"lat": -23.5560, "lng": -46.6900},
+    "Moema":         {"lat": -23.6010, "lng": -46.6650},
+    "Itaim Bibi":    {"lat": -23.5860, "lng": -46.6790},
+    "Liberdade":     {"lat": -23.5580, "lng": -46.6350},
+    "Jardins":       {"lat": -23.5650, "lng": -46.6650},
+    "Bela Vista":    {"lat": -23.5610, "lng": -46.6450},
+    "Consolação":    {"lat": -23.5520, "lng": -46.6600},
+    "Vila Mariana":  {"lat": -23.5890, "lng": -46.6340},
+    "Perdizes":      {"lat": -23.5360, "lng": -46.6800},
+    "Santana":       {"lat": -23.5020, "lng": -46.6250},
+    "Tatuapé":       {"lat": -23.5400, "lng": -46.5760},
+    "Mooca":         {"lat": -23.5590, "lng": -46.5990},
+    "Brooklin":      {"lat": -23.6170, "lng": -46.6880},
+    "Butantã":       {"lat": -23.5710, "lng": -46.7080},
+    "Lapa":          {"lat": -23.5270, "lng": -46.7040},
+    "Santo Amaro":   {"lat": -23.6540, "lng": -46.7100},
+    "Ipiranga":      {"lat": -23.5890, "lng": -46.6060},
+    "Centro":        {"lat": -23.5450, "lng": -46.6340}
+  },
+  "price_bounds": {"min": 35, "max": 250}
+}

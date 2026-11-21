@@ -1,0 +1,2539 @@
+[
+  {
+    "id": "1e5e8187-bbac-5c50-8ef8-c8c0758cb87d",
+    "slug": "cantina-vento-leste",
+    "name": "Cantina Vento Leste",
+    "cuisine": "italiana",
+    "description": "Massas frescas feitas na casa e molhos de cozimento lento, em salão de luz baixa.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.564481,
+    "longitude": -46.687635,
+    "avg_price": 85,
+    "dietary_options": [
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "tranquilo",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.88,
+    "rating": 4.5,
+    "rating_count": 385,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "22d9405b-09e7-554b-abc0-7ab0415da20d",
+    "slug": "trattoria-lume-antico",
+    "name": "Trattoria Lume Antico",
+    "cuisine": "italiana",
+    "description": "Cantina de mesas compridas, boa para grupos, com risotos e pratos para dividir.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.555688,
+    "longitude": -46.689269,
+    "avg_price": 72,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.88,
+    "rating": 4.1,
+    "rating_count": 649,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "aad5f8d7-5d26-53fd-ba68-692b43116f07",
+    "slug": "osteria-pedra-branca",
+    "name": "Osteria Pedra Branca",
+    "cuisine": "italiana",
+    "description": "Menu degustação de inspiração toscana e carta de vinhos enxuta.",
+    "neighborhood": "Jardins",
+    "city": "São Paulo",
+    "latitude": -23.566524,
+    "longitude": -46.662523,
+    "avg_price": 165,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 24,
+    "ambiences": [
+      "romantico",
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.96,
+    "rating": 4.1,
+    "rating_count": 119,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "dca44ac4-ce50-593c-b699-8b50013eca0c",
+    "slug": "forno-quintal-nove",
+    "name": "Forno Quintal Nove",
+    "cuisine": "pizzaria",
+    "description": "Pizza de fermentação longa num quintal coberto; tem massa sem glúten e queijo vegetal.",
+    "neighborhood": "Perdizes",
+    "city": "São Paulo",
+    "latitude": -23.535333,
+    "longitude": -46.679016,
+    "avg_price": 58,
+    "dietary_options": [
+      "sem_gluten",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 50,
+    "ambiences": [
+      "casual",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [
+        "18:00-23:30"
+      ],
+      "ter": [
+        "18:00-23:30"
+      ],
+      "qua": [
+        "18:00-23:30"
+      ],
+      "qui": [
+        "18:00-23:30"
+      ],
+      "sex": [
+        "18:00-23:30"
+      ],
+      "sab": [
+        "18:00-23:30"
+      ],
+      "dom": [
+        "18:00-23:30"
+      ]
+    },
+    "availability_rate": 0.86,
+    "rating": 4.1,
+    "rating_count": 42,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "18844bcc-4ab9-51f4-8981-1a14543f3583",
+    "slug": "pizzaria-lua-de-tijolo",
+    "name": "Pizzaria Lua de Tijolo",
+    "cuisine": "pizzaria",
+    "description": "Pizza de forno a lenha em salão barulhento e familiar.",
+    "neighborhood": "Mooca",
+    "city": "São Paulo",
+    "latitude": -23.556808,
+    "longitude": -46.601815,
+    "avg_price": 49,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 60,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [
+        "18:00-23:30"
+      ],
+      "ter": [
+        "18:00-23:30"
+      ],
+      "qua": [
+        "18:00-23:30"
+      ],
+      "qui": [
+        "18:00-23:30"
+      ],
+      "sex": [
+        "18:00-23:30"
+      ],
+      "sab": [
+        "18:00-23:30"
+      ],
+      "dom": [
+        "18:00-23:30"
+      ]
+    },
+    "availability_rate": 0.92,
+    "rating": 3.9,
+    "rating_count": 240,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "dde424f1-de53-5e8c-94a4-1cb0d1ece3eb",
+    "slug": "massa-madre-estelar",
+    "name": "Massa Madre Estelar",
+    "cuisine": "pizzaria",
+    "description": "Pizzas de longa fermentação com cardápio inteiro adaptável para restrições.",
+    "neighborhood": "Butantã",
+    "city": "São Paulo",
+    "latitude": -23.56839,
+    "longitude": -46.704874,
+    "avg_price": 64,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual",
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [
+        "18:00-23:30"
+      ],
+      "ter": [
+        "18:00-23:30"
+      ],
+      "qua": [
+        "18:00-23:30"
+      ],
+      "qui": [
+        "18:00-23:30"
+      ],
+      "sex": [
+        "18:00-23:30"
+      ],
+      "sab": [
+        "18:00-23:30"
+      ],
+      "dom": [
+        "18:00-23:30"
+      ]
+    },
+    "availability_rate": 0.92,
+    "rating": 4.7,
+    "rating_count": 419,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "bfea1839-bf0e-5341-b823-f90ec235b462",
+    "slug": "mare-calma-sushi",
+    "name": "Maré Calma Sushi",
+    "cuisine": "japonesa",
+    "description": "Balcão de sushi tradicional, opções de shoyu sem glúten e combinados vegetarianos.",
+    "neighborhood": "Liberdade",
+    "city": "São Paulo",
+    "latitude": -23.555555,
+    "longitude": -46.636219,
+    "avg_price": 95,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 24,
+    "ambiences": [
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.93,
+    "rating": 4.4,
+    "rating_count": 311,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "fea2c553-6f2d-5f17-852f-dd3e6c4ee1ec",
+    "slug": "omakase-kumo-azul",
+    "name": "Omakase Kumo Azul",
+    "cuisine": "japonesa",
+    "description": "Omakase de doze etapas para poucos lugares no balcão.",
+    "neighborhood": "Itaim Bibi",
+    "city": "São Paulo",
+    "latitude": -23.58667,
+    "longitude": -46.679516,
+    "avg_price": 240,
+    "dietary_options": [
+      "sem_lactose"
+    ],
+    "capacity": 10,
+    "ambiences": [
+      "tranquilo",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.98,
+    "rating": 4.8,
+    "rating_count": 767,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "61935cef-493c-5064-a630-c66327c4700d",
+    "slug": "lamen-ponte-vermelha",
+    "name": "Lamen Ponte Vermelha",
+    "cuisine": "japonesa",
+    "description": "Lamen de caldo encorpado servido rápido; tem versão vegetariana com missô.",
+    "neighborhood": "Liberdade",
+    "city": "São Paulo",
+    "latitude": -23.561119,
+    "longitude": -46.634622,
+    "avg_price": 55,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 20,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.84,
+    "rating": 4.6,
+    "rating_count": 641,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "cf436d69-d6b2-5885-b6ce-02b419c6547f",
+    "slug": "izakaya-lanterna-torta",
+    "name": "Izakaya Lanterna Torta",
+    "cuisine": "japonesa",
+    "description": "Petiscos japoneses grelhados e drinques, clima de bar até tarde.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.555729,
+    "longitude": -46.692792,
+    "avg_price": 88,
+    "dietary_options": [
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "17:00-23:59"
+      ],
+      "qua": [
+        "17:00-23:59"
+      ],
+      "qui": [
+        "17:00-23:59"
+      ],
+      "sex": [
+        "17:00-23:59"
+      ],
+      "sab": [
+        "13:00-23:59"
+      ],
+      "dom": [
+        "13:00-22:00"
+      ]
+    },
+    "availability_rate": 0.83,
+    "rating": 4.0,
+    "rating_count": 391,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "25585a31-ee2d-5efa-b931-0f07e0826da0",
+    "slug": "casa-jacaranda",
+    "name": "Casa Jacarandá",
+    "cuisine": "brasileira",
+    "description": "Comida brasileira de fazenda com varanda arborizada e pratos para compartilhar.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.56224,
+    "longitude": -46.689422,
+    "avg_price": 68,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 45,
+    "ambiences": [
+      "casual",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.97,
+    "rating": 4.8,
+    "rating_count": 311,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "b35ad0fa-02c5-5d74-a427-bbbd8f4d9d32",
+    "slug": "panela-de-barro-fume",
+    "name": "Panela de Barro Fumê",
+    "cuisine": "brasileira",
+    "description": "Pratos feitos caseiros e moquecas de panela de barro, com opções sem glúten.",
+    "neighborhood": "Vila Mariana",
+    "city": "São Paulo",
+    "latitude": -23.591585,
+    "longitude": -46.631154,
+    "avg_price": 45,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 35,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.95,
+    "rating": 4.2,
+    "rating_count": 71,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "963d302f-d605-5303-b55b-2f2ef552bb21",
+    "slug": "boteco-esquina-do-ipe",
+    "name": "Boteco Esquina do Ipê",
+    "cuisine": "brasileira",
+    "description": "Boteco de calçada com porções, petiscos vegetarianos e música ao vivo.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.551479,
+    "longitude": -46.693394,
+    "avg_price": 52,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 70,
+    "ambiences": [
+      "animado",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "17:00-23:59"
+      ],
+      "qua": [
+        "17:00-23:59"
+      ],
+      "qui": [
+        "17:00-23:59"
+      ],
+      "sex": [
+        "17:00-23:59"
+      ],
+      "sab": [
+        "13:00-23:59"
+      ],
+      "dom": [
+        "13:00-22:00"
+      ]
+    },
+    "availability_rate": 0.84,
+    "rating": 4.7,
+    "rating_count": 625,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "973c55c9-f56f-59ff-b5b3-1c0a918faa4b",
+    "slug": "fogao-de-lenha-serra-fina",
+    "name": "Fogão de Lenha Serra Fina",
+    "cuisine": "brasileira",
+    "description": "Cozinha mineira de fogão a lenha, servida em travessas para a mesa.",
+    "neighborhood": "Butantã",
+    "city": "São Paulo",
+    "latitude": -23.574547,
+    "longitude": -46.708456,
+    "avg_price": 58,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 60,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.93,
+    "rating": 4.4,
+    "rating_count": 526,
+    "simulated_benefit": "Sobremesa cortesia para o aniversariante (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "7e5845c5-cbdc-5754-a1fd-bf3c0afe96ad",
+    "slug": "varal-de-temperos",
+    "name": "Varal de Temperos",
+    "cuisine": "brasileira",
+    "description": "Cozinha brasileira contemporânea com horta própria e cardápio inclusivo.",
+    "neighborhood": "Brooklin",
+    "city": "São Paulo",
+    "latitude": -23.612993,
+    "longitude": -46.684813,
+    "avg_price": 74,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.94,
+    "rating": 4.0,
+    "rating_count": 351,
+    "simulated_benefit": "Sobremesa cortesia para o aniversariante (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "f69db839-7ccd-51ad-afec-c3cf16fdb09a",
+    "slug": "sertao-lilas",
+    "name": "Sertão Lilás",
+    "cuisine": "nordestina",
+    "description": "Baião de dois, carne de sol e tapiocas, com forró ao vivo às sextas.",
+    "neighborhood": "Bela Vista",
+    "city": "São Paulo",
+    "latitude": -23.56102,
+    "longitude": -46.640062,
+    "avg_price": 62,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 50,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.82,
+    "rating": 3.9,
+    "rating_count": 652,
+    "simulated_benefit": "Sobremesa cortesia para o aniversariante (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "4f758947-7aad-55a2-9005-cac21ab571ac",
+    "slug": "mandacaru-azul",
+    "name": "Mandacaru Azul",
+    "cuisine": "nordestina",
+    "description": "Comida nordestina caseira com cuscuz, macaxeira e opções vegetarianas.",
+    "neighborhood": "Santana",
+    "city": "São Paulo",
+    "latitude": -23.503141,
+    "longitude": -46.626211,
+    "avg_price": 48,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.96,
+    "rating": 4.8,
+    "rating_count": 851,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "addd30b4-d05b-575e-99e3-15db4f4d08b2",
+    "slug": "horta-viva-cozinha",
+    "name": "Horta Viva Cozinha",
+    "cuisine": "vegetariana",
+    "description": "Cozinha 100% vegetal, com cardápio sem glúten e sem lactose.",
+    "neighborhood": "Vila Mariana",
+    "city": "São Paulo",
+    "latitude": -23.593862,
+    "longitude": -46.636219,
+    "avg_price": 55,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "tranquilo",
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.84,
+    "rating": 4.6,
+    "rating_count": 660,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "40feb09c-7c9b-52cb-81fd-e11af9301be4",
+    "slug": "folha-brasa",
+    "name": "Folha & Brasa",
+    "cuisine": "vegetariana",
+    "description": "Vegetais na brasa e menu autoral vegetariano em ambiente intimista.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.568662,
+    "longitude": -46.688083,
+    "avg_price": 78,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 28,
+    "ambiences": [
+      "tranquilo",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.96,
+    "rating": 4.6,
+    "rating_count": 103,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "d8778580-ad91-5b18-a4f2-be097accbcbf",
+    "slug": "raiz-urbana-vegana",
+    "name": "Raiz Urbana Vegana",
+    "cuisine": "vegetariana",
+    "description": "Hambúrgueres de grão, bowls e sobremesas veganas a preço justo.",
+    "neighborhood": "Consolação",
+    "city": "São Paulo",
+    "latitude": -23.550176,
+    "longitude": -46.658963,
+    "avg_price": 46,
+    "dietary_options": [
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 32,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.94,
+    "rating": 4.2,
+    "rating_count": 586,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "fe350484-6284-57b0-8969-fc57061e3bd3",
+    "slug": "dragao-de-papel",
+    "name": "Dragão de Papel",
+    "cuisine": "chinesa",
+    "description": "Dim sum e pratos de wok em mesas redondas giratórias para grupos.",
+    "neighborhood": "Liberdade",
+    "city": "São Paulo",
+    "latitude": -23.557697,
+    "longitude": -46.63393,
+    "avg_price": 52,
+    "dietary_options": [
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 60,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.92,
+    "rating": 4.1,
+    "rating_count": 76,
+    "simulated_benefit": "Sobremesa cortesia para o aniversariante (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "e1cc8ee3-32f3-596e-8549-974c9277938f",
+    "slug": "jardim-de-jade",
+    "name": "Jardim de Jade",
+    "cuisine": "chinesa",
+    "description": "Cozinha cantonesa leve, com molhos sem glúten sob pedido.",
+    "neighborhood": "Tatuapé",
+    "city": "São Paulo",
+    "latitude": -23.539615,
+    "longitude": -46.573076,
+    "avg_price": 66,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.85,
+    "rating": 4.8,
+    "rating_count": 854,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "08fe663a-6d03-5a42-b24f-0a1012f9b1d3",
+    "slug": "wok-vento-norte",
+    "name": "Wok Vento Norte",
+    "cuisine": "chinesa",
+    "description": "Yakissoba e arroz frito montados na hora, com proteína vegetal.",
+    "neighborhood": "Brooklin",
+    "city": "São Paulo",
+    "latitude": -23.61823,
+    "longitude": -46.683578,
+    "avg_price": 47,
+    "dietary_options": [
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.87,
+    "rating": 4.1,
+    "rating_count": 753,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "57f869d2-525b-553e-b0be-e8fd4965d4b8",
+    "slug": "seul-noturno",
+    "name": "Seul Noturno",
+    "cuisine": "coreana",
+    "description": "Churrasco coreano na mesa, banchan variados e soju.",
+    "neighborhood": "Bela Vista",
+    "city": "São Paulo",
+    "latitude": -23.562129,
+    "longitude": -46.64512,
+    "avg_price": 82,
+    "dietary_options": [
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 36,
+    "ambiences": [
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "17:00-23:59"
+      ],
+      "qua": [
+        "17:00-23:59"
+      ],
+      "qui": [
+        "17:00-23:59"
+      ],
+      "sex": [
+        "17:00-23:59"
+      ],
+      "sab": [
+        "13:00-23:59"
+      ],
+      "dom": [
+        "13:00-22:00"
+      ]
+    },
+    "availability_rate": 0.95,
+    "rating": 4.9,
+    "rating_count": 627,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "de384c34-42bd-5bbe-a195-1e5c35504a78",
+    "slug": "kimchi-quintal",
+    "name": "Kimchi Quintal",
+    "cuisine": "coreana",
+    "description": "Bibimbap, tteokbokki e kimchi da casa, com versões veganas.",
+    "neighborhood": "Liberdade",
+    "city": "São Paulo",
+    "latitude": -23.552641,
+    "longitude": -46.636138,
+    "avg_price": 64,
+    "dietary_options": [
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 24,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.97,
+    "rating": 4.8,
+    "rating_count": 254,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "a27a218f-c00d-56c5-b2d8-593c40705b38",
+    "slug": "lotus-picante",
+    "name": "Lótus Picante",
+    "cuisine": "tailandesa",
+    "description": "Curries tailandeses à base de leite de coco, quase todo o cardápio sem glúten.",
+    "neighborhood": "Itaim Bibi",
+    "city": "São Paulo",
+    "latitude": -23.585685,
+    "longitude": -46.675727,
+    "avg_price": 98,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "tranquilo",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.85,
+    "rating": 4.6,
+    "rating_count": 305,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "99b5ad75-002d-5f94-bcab-01c693501572",
+    "slug": "manjericao-sagrado",
+    "name": "Manjericão Sagrado",
+    "cuisine": "tailandesa",
+    "description": "Pad thai, saladas picantes e curries em salão pequeno e colorido.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.551991,
+    "longitude": -46.686589,
+    "avg_price": 74,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 26,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.92,
+    "rating": 4.7,
+    "rating_count": 54,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "e31d4e1a-e28e-5865-86ca-1868171ff692",
+    "slug": "especiaria-moncao",
+    "name": "Especiaria Monção",
+    "cuisine": "indiana",
+    "description": "Thalis do sul da Índia e curries vegetarianos com pão feito no tandoor.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.565059,
+    "longitude": -46.698618,
+    "avg_price": 80,
+    "dietary_options": [
+      "sem_gluten",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 34,
+    "ambiences": [
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.86,
+    "rating": 4.2,
+    "rating_count": 371,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "7b2905f2-d57a-5c2b-b8c8-33dc1b52b494",
+    "slug": "curry-do-viajante",
+    "name": "Curry do Viajante",
+    "cuisine": "indiana",
+    "description": "Curries do dia servidos em pratos executivos, muitos veganos.",
+    "neighborhood": "Bela Vista",
+    "city": "São Paulo",
+    "latitude": -23.560974,
+    "longitude": -46.646928,
+    "avg_price": 58,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 28,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.96,
+    "rating": 4.0,
+    "rating_count": 69,
+    "simulated_benefit": "Sobremesa cortesia para o aniversariante (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "a555f4ed-a22e-5fdb-a7be-c5b259d3a83e",
+    "slug": "cedro-mel",
+    "name": "Cedro & Mel",
+    "cuisine": "arabe",
+    "description": "Mezze para dividir, falafel e kafta, em salão grande e movimentado.",
+    "neighborhood": "Consolação",
+    "city": "São Paulo",
+    "latitude": -23.551742,
+    "longitude": -46.663645,
+    "avg_price": 44,
+    "dietary_options": [
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 60,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.89,
+    "rating": 4.4,
+    "rating_count": 419,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "cd8190a0-509c-5bc7-93d6-b00d872047e4",
+    "slug": "tenda-do-zaatar",
+    "name": "Tenda do Zaatar",
+    "cuisine": "arabe",
+    "description": "Grelhados e pastas árabes servidos em pátio com tendas.",
+    "neighborhood": "Moema",
+    "city": "São Paulo",
+    "latitude": -23.601717,
+    "longitude": -46.661015,
+    "avg_price": 62,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "tranquilo",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.97,
+    "rating": 4.5,
+    "rating_count": 839,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "39c0ed0c-7335-5bd2-8212-48e4d28a2b2a",
+    "slug": "esfiharia-areia-dourada",
+    "name": "Esfiharia Areia Dourada",
+    "cuisine": "arabe",
+    "description": "Esfihas abertas e fechadas assadas na hora, boa pedida para orçamento curto.",
+    "neighborhood": "Santana",
+    "city": "São Paulo",
+    "latitude": -23.500624,
+    "longitude": -46.626375,
+    "avg_price": 36,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 50,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.87,
+    "rating": 4.2,
+    "rating_count": 662,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "bf637e22-7c25-5dd6-bf5e-1d4635c926e2",
+    "slug": "cantina-nopal",
+    "name": "Cantina Nopal",
+    "cuisine": "mexicana",
+    "description": "Tacos de tortilha de milho (sem glúten), guacamole e terraço animado.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.570176,
+    "longitude": -46.691418,
+    "avg_price": 66,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 45,
+    "ambiences": [
+      "animado",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "17:00-23:59"
+      ],
+      "qua": [
+        "17:00-23:59"
+      ],
+      "qui": [
+        "17:00-23:59"
+      ],
+      "sex": [
+        "17:00-23:59"
+      ],
+      "sab": [
+        "13:00-23:59"
+      ],
+      "dom": [
+        "13:00-22:00"
+      ]
+    },
+    "availability_rate": 0.89,
+    "rating": 4.2,
+    "rating_count": 651,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "5ef2dbc6-abf8-56fa-9a3a-e46a538ed527",
+    "slug": "taqueria-calavera-verde",
+    "name": "Taqueria Calavera Verde",
+    "cuisine": "mexicana",
+    "description": "Tacos, quesadillas e nachos, com música alta e clima de festa.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.553913,
+    "longitude": -46.687813,
+    "avg_price": 54,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 35,
+    "ambiences": [
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "17:00-23:59"
+      ],
+      "qua": [
+        "17:00-23:59"
+      ],
+      "qui": [
+        "17:00-23:59"
+      ],
+      "sex": [
+        "17:00-23:59"
+      ],
+      "sab": [
+        "13:00-23:59"
+      ],
+      "dom": [
+        "13:00-22:00"
+      ]
+    },
+    "availability_rate": 0.88,
+    "rating": 4.0,
+    "rating_count": 670,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "961a94c8-efe4-5e59-8cd5-51e65ffd6093",
+    "slug": "cevicheria-pacifico-sul",
+    "name": "Cevicheria Pacífico Sul",
+    "cuisine": "peruana",
+    "description": "Ceviches, tiraditos e causas, com peixe do dia.",
+    "neighborhood": "Itaim Bibi",
+    "city": "São Paulo",
+    "latitude": -23.583011,
+    "longitude": -46.674811,
+    "avg_price": 135,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "casual",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.95,
+    "rating": 3.9,
+    "rating_count": 419,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "171340d7-9570-50ad-8d22-367761acdcbe",
+    "slug": "inca-fogo-lento",
+    "name": "Inca Fogo Lento",
+    "cuisine": "peruana",
+    "description": "Cozinha andina com batatas nativas, quinoa e pratos de cocção lenta.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.568935,
+    "longitude": -46.693067,
+    "avg_price": 110,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 26,
+    "ambiences": [
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.84,
+    "rating": 4.6,
+    "rating_count": 335,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "21383cf7-f3fe-5542-9c57-cdbc55574d3d",
+    "slug": "bistro-petala-cinza",
+    "name": "Bistrô Pétala Cinza",
+    "cuisine": "francesa",
+    "description": "Clássicos franceses em menu fechado, salão silencioso e serviço à francesa.",
+    "neighborhood": "Jardins",
+    "city": "São Paulo",
+    "latitude": -23.561061,
+    "longitude": -46.66143,
+    "avg_price": 190,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 22,
+    "ambiences": [
+      "tranquilo",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.93,
+    "rating": 4.2,
+    "rating_count": 708,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "5a995f1f-5cae-5d75-be99-fc0771777e03",
+    "slug": "maison-vinha-clara",
+    "name": "Maison Vinha Clara",
+    "cuisine": "francesa",
+    "description": "Bistrô francês com pratos do dia e uma pequena adega.",
+    "neighborhood": "Moema",
+    "city": "São Paulo",
+    "latitude": -23.59846,
+    "longitude": -46.66489,
+    "avg_price": 145,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 24,
+    "ambiences": [
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.95,
+    "rating": 4.4,
+    "rating_count": 601,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "bdf98cd3-72aa-565a-b9bc-898abfc094e0",
+    "slug": "tasca-azulejo-partido",
+    "name": "Tasca Azulejo Partido",
+    "cuisine": "portuguesa",
+    "description": "Bacalhau, polvo e petiscos portugueses numa tasca de azulejos.",
+    "neighborhood": "Bela Vista",
+    "city": "São Paulo",
+    "latitude": -23.562028,
+    "longitude": -46.643509,
+    "avg_price": 118,
+    "dietary_options": [
+      "sem_gluten"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual",
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.87,
+    "rating": 4.4,
+    "rating_count": 892,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "f00c5631-4572-53a5-b412-ec5f7c529e44",
+    "slug": "adega-sete-colinas",
+    "name": "Adega Sete Colinas",
+    "cuisine": "portuguesa",
+    "description": "Cozinha portuguesa de forno e vinhos do Douro e do Alentejo.",
+    "neighborhood": "Moema",
+    "city": "São Paulo",
+    "latitude": -23.600029,
+    "longitude": -46.662466,
+    "avg_price": 155,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.96,
+    "rating": 4.2,
+    "rating_count": 734,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "54c7c8af-38ba-5547-8bb5-79e85e45e527",
+    "slug": "brasa-pampa-norte",
+    "name": "Brasa Pampa Norte",
+    "cuisine": "carnes",
+    "description": "Cortes nobres na grelha e buffet de saladas, salão grande e cheio.",
+    "neighborhood": "Itaim Bibi",
+    "city": "São Paulo",
+    "latitude": -23.585411,
+    "longitude": -46.676633,
+    "avg_price": 210,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose"
+    ],
+    "capacity": 80,
+    "ambiences": [
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [
+        "12:00-23:00"
+      ],
+      "ter": [
+        "12:00-23:00"
+      ],
+      "qua": [
+        "12:00-23:00"
+      ],
+      "qui": [
+        "12:00-23:00"
+      ],
+      "sex": [
+        "12:00-23:00"
+      ],
+      "sab": [
+        "12:00-23:00"
+      ],
+      "dom": [
+        "12:00-23:00"
+      ]
+    },
+    "availability_rate": 0.95,
+    "rating": 4.3,
+    "rating_count": 383,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "61b15acf-68b6-5fc2-80e4-340f6ca3069b",
+    "slug": "parrilla-coracao-de-ferro",
+    "name": "Parrilla Coração de Ferro",
+    "cuisine": "carnes",
+    "description": "Parrilla de inspiração uruguaia com cortes para compartilhar.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.56438,
+    "longitude": -46.689074,
+    "avg_price": 125,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose"
+    ],
+    "capacity": 50,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [
+        "12:00-23:00"
+      ],
+      "ter": [
+        "12:00-23:00"
+      ],
+      "qua": [
+        "12:00-23:00"
+      ],
+      "qui": [
+        "12:00-23:00"
+      ],
+      "sex": [
+        "12:00-23:00"
+      ],
+      "sab": [
+        "12:00-23:00"
+      ],
+      "dom": [
+        "12:00-23:00"
+      ]
+    },
+    "availability_rate": 0.82,
+    "rating": 4.4,
+    "rating_count": 853,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "9b1507cd-eccb-5812-bc27-4a5952c7f7f3",
+    "slug": "ostra-farol",
+    "name": "Ostra & Farol",
+    "cuisine": "frutos_do_mar",
+    "description": "Ostras frescas, peixes inteiros e frutos do mar grelhados.",
+    "neighborhood": "Jardins",
+    "city": "São Paulo",
+    "latitude": -23.563757,
+    "longitude": -46.668394,
+    "avg_price": 175,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "tranquilo",
+      "romantico"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "19:30-23:00"
+      ],
+      "qua": [
+        "19:30-23:00"
+      ],
+      "qui": [
+        "19:30-23:00"
+      ],
+      "sex": [
+        "19:30-23:59"
+      ],
+      "sab": [
+        "19:30-23:59"
+      ],
+      "dom": []
+    },
+    "availability_rate": 0.86,
+    "rating": 4.5,
+    "rating_count": 593,
+    "simulated_benefit": "Drink sem álcool de boas-vindas (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "17d68190-a671-5b9c-b8b3-d81755c7380f",
+    "slug": "peixaria-cais-doze",
+    "name": "Peixaria Cais Doze",
+    "cuisine": "frutos_do_mar",
+    "description": "Peixe na brasa e moquecas num deque ao ar livre.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.552996,
+    "longitude": -46.694072,
+    "avg_price": 105,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.96,
+    "rating": 4.1,
+    "rating_count": 772,
+    "simulated_benefit": "10% de desconto na conta para grupos de 4 ou mais (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "9fbea53c-96f5-5320-8ccf-1ecde7c786a6",
+    "slug": "burger-garagem-77",
+    "name": "Burger Garagem 77",
+    "cuisine": "hamburgueria",
+    "description": "Hambúrguer smash numa antiga oficina, com versão vegetariana de grão-de-bico.",
+    "neighborhood": "Pinheiros",
+    "city": "São Paulo",
+    "latitude": -23.564515,
+    "longitude": -46.691037,
+    "avg_price": 48,
+    "dietary_options": [
+      "sem_lactose",
+      "vegetariana"
+    ],
+    "capacity": 45,
+    "ambiences": [
+      "casual",
+      "animado"
+    ],
+    "opening_hours": {
+      "seg": [
+        "18:00-23:30"
+      ],
+      "ter": [
+        "18:00-23:30"
+      ],
+      "qua": [
+        "18:00-23:30"
+      ],
+      "qui": [
+        "18:00-23:30"
+      ],
+      "sex": [
+        "18:00-23:30"
+      ],
+      "sab": [
+        "18:00-23:30"
+      ],
+      "dom": [
+        "18:00-23:30"
+      ]
+    },
+    "availability_rate": 0.83,
+    "rating": 4.2,
+    "rating_count": 757,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "8ceaab2e-f5c1-5d97-baac-e9ca2e3c1668",
+    "slug": "chapa-quente-da-rua-nove",
+    "name": "Chapa Quente da Rua Nove",
+    "cuisine": "hamburgueria",
+    "description": "Lanches de chapa grandes e baratos, sem frescura.",
+    "neighborhood": "Mooca",
+    "city": "São Paulo",
+    "latitude": -23.5574,
+    "longitude": -46.599264,
+    "avg_price": 39,
+    "dietary_options": [
+      "vegetariana"
+    ],
+    "capacity": 40,
+    "ambiences": [
+      "casual"
+    ],
+    "opening_hours": {
+      "seg": [
+        "18:00-23:30"
+      ],
+      "ter": [
+        "18:00-23:30"
+      ],
+      "qua": [
+        "18:00-23:30"
+      ],
+      "qui": [
+        "18:00-23:30"
+      ],
+      "sex": [
+        "18:00-23:30"
+      ],
+      "sab": [
+        "18:00-23:30"
+      ],
+      "dom": [
+        "18:00-23:30"
+      ]
+    },
+    "availability_rate": 0.91,
+    "rating": 4.3,
+    "rating_count": 245,
+    "simulated_benefit": null,
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "8f7e4605-0c3f-5d4f-88bf-759e960937c6",
+    "slug": "hamburguer-satelite",
+    "name": "Hambúrguer Satélite",
+    "cuisine": "hamburgueria",
+    "description": "Hambúrgueres artesanais com pão sem glúten e opção 100% vegetal.",
+    "neighborhood": "Moema",
+    "city": "São Paulo",
+    "latitude": -23.601904,
+    "longitude": -46.664415,
+    "avg_price": 62,
+    "dietary_options": [
+      "sem_gluten",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 55,
+    "ambiences": [
+      "casual",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [
+        "18:00-23:30"
+      ],
+      "ter": [
+        "18:00-23:30"
+      ],
+      "qua": [
+        "18:00-23:30"
+      ],
+      "qui": [
+        "18:00-23:30"
+      ],
+      "sex": [
+        "18:00-23:30"
+      ],
+      "sab": [
+        "18:00-23:30"
+      ],
+      "dom": [
+        "18:00-23:30"
+      ]
+    },
+    "availability_rate": 0.86,
+    "rating": 4.9,
+    "rating_count": 282,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "9d85f6c8-1d03-5ba5-be09-cd0da8284dd5",
+    "slug": "cafe-ninho-de-papel",
+    "name": "Café Ninho de Papel",
+    "cuisine": "cafe_bistro",
+    "description": "Café e bistrô de bairro com pratos leves e cardápio todo adaptável.",
+    "neighborhood": "Vila Madalena",
+    "city": "São Paulo",
+    "latitude": -23.555368,
+    "longitude": -46.690456,
+    "avg_price": 42,
+    "dietary_options": [
+      "sem_gluten",
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 20,
+    "ambiences": [
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "09:00-22:00"
+      ],
+      "qua": [
+        "09:00-22:00"
+      ],
+      "qui": [
+        "09:00-22:00"
+      ],
+      "sex": [
+        "09:00-22:30"
+      ],
+      "sab": [
+        "09:00-22:30"
+      ],
+      "dom": [
+        "09:00-18:00"
+      ]
+    },
+    "availability_rate": 0.87,
+    "rating": 4.3,
+    "rating_count": 636,
+    "simulated_benefit": "Sobremesa cortesia para o aniversariante (simulado)",
+    "accepts_reservation": false,
+    "is_fictional": true
+  },
+  {
+    "id": "2508c133-e634-5e99-9170-7b552e67b374",
+    "slug": "bistro-varanda-amarela",
+    "name": "Bistrô Varanda Amarela",
+    "cuisine": "cafe_bistro",
+    "description": "Pratos do dia de bistrô numa varanda com plantas.",
+    "neighborhood": "Perdizes",
+    "city": "São Paulo",
+    "latitude": -23.53303,
+    "longitude": -46.678794,
+    "avg_price": 68,
+    "dietary_options": [
+      "sem_gluten",
+      "vegetariana"
+    ],
+    "capacity": 30,
+    "ambiences": [
+      "tranquilo",
+      "ao_ar_livre"
+    ],
+    "opening_hours": {
+      "seg": [],
+      "ter": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qua": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "qui": [
+        "12:00-15:00",
+        "19:00-23:00"
+      ],
+      "sex": [
+        "12:00-15:00",
+        "19:00-23:30"
+      ],
+      "sab": [
+        "12:00-16:00",
+        "19:00-23:30"
+      ],
+      "dom": [
+        "12:00-17:00"
+      ]
+    },
+    "availability_rate": 0.97,
+    "rating": 4.5,
+    "rating_count": 693,
+    "simulated_benefit": null,
+    "accepts_reservation": true,
+    "is_fictional": true
+  },
+  {
+    "id": "62bcaa7a-fcc6-58dd-9407-60fc17aef2cd",
+    "slug": "casa-de-cha-neblina",
+    "name": "Casa de Chá Neblina",
+    "cuisine": "cafe_bistro",
+    "description": "Chás, tortas e sanduíches leves; fecha no começo da noite.",
+    "neighborhood": "Brooklin",
+    "city": "São Paulo",
+    "latitude": -23.620923,
+    "longitude": -46.684933,
+    "avg_price": 38,
+    "dietary_options": [
+      "sem_lactose",
+      "vegana",
+      "vegetariana"
+    ],
+    "capacity": 18,
+    "ambiences": [
+      "tranquilo"
+    ],
+    "opening_hours": {
+      "seg": [
+        "08:00-19:00"
+      ],
+      "ter": [
+        "08:00-19:00"
+      ],
+      "qua": [
+        "08:00-19:00"
+      ],
+      "qui": [
+        "08:00-19:00"
+      ],
+      "sex": [
+        "08:00-19:00"
+      ],
+      "sab": [
+        "09:00-19:00"
+      ],
+      "dom": [
+        "09:00-18:00"
+      ]
+    },
+    "availability_rate": 0.85,
+    "rating": 4.2,
+    "rating_count": 80,
+    "simulated_benefit": "Entrada para dividir por conta da casa (simulado)",
+    "accepts_reservation": false,
+    "is_fictional": true
+  }
+]
