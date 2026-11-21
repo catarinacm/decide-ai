@@ -36,3 +36,6 @@ Thumbs.db
 
 # Configuração local do Claude Code
 .claude/
+
+# Capturas do teste de interface
+e2e-output/
