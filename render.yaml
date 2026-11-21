@@ -1,0 +1,27 @@
+# Blueprint do Render: API do iFood Match (FastAPI). As chaves são preenchidas no painel (sync: false).
+services:
+  - type: web
+    name: ifood-match-api
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r backend/requirements.txt
+    # Aplica as migrations pendentes (idempotente) e sobe a API atrás do proxy do Render.
+    startCommand: python backend/scripts/migrate.py && cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips "*"
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.5"
+      - key: DATABASE_URL
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-haiku-5-5
+      - key: AI_TIMEOUT_SECONDS
+        value: "8"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
