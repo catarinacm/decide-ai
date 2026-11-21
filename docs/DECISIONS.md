@@ -1,0 +1,17 @@
+# Decisões de projeto
+
+Registro das decisões que não estavam fechadas na especificação (`docs/ifood.docx`) ou que divergiam do pedido inicial. Cada uma tem o motivo e onde aparece no código.
+
+Status: **aprovada** = validada com a autora; **técnica** = tomada durante a construção, pelo critério "o mais simples que cumpra os critérios de avaliação".
+
+| ID | Decisão | Motivo | Status |
+|---|---|---|---|
+| D-001 | Cada participante pode informar um **orçamento máximo opcional**. O teto do filtro obrigatório é o menor entre o orçamento por pessoa do grupo e os orçamentos individuais informados. O componente P do score mede o custo-benefício em relação ao orçamento de cada participante. | O docx pede "orçamento individual e do grupo" na Etapa A e coleta "orçamento máximo" no convite. Usar o menor teto garante que ninguém fique de fora por preço, que é a dor do case (orçamento fixo). | aprovada |
+| D-002 | O organizador tem o botão **"Gerar com quem já respondeu"** (mínimo de 2 participantes com preferências). É uma exceção explícita à regra do docx "Match indisponível até o grupo estar completo": a regra continua valendo por padrão, e a interface mostra quem ficou de fora. | Sem isso, um grupo trava se um amigo não responder. A exceção é uma ação consciente do organizador, não um atalho silencioso. | aprovada |
+| D-003 | Campos opcionais **tipo de ocasião** (na criação do encontro) e **prazo da votação** (encerramento automático além do encerramento manual pelo organizador). | Os dois aparecem no docx (fluxo "Como o produto funcionaria" e tabela de riscos: "votação com prazo opcional"). | aprovada |
+| D-004 | O backend acessa o Supabase pela **connection string do Postgres (Session pooler)**, em `DATABASE_URL`, e não pela API REST com a service role key. | Permite transações (invalidar ranking e votos de uma vez), restrições de integridade e rodar as migrations SQL. A credencial continua só no backend. | aprovada |
+| D-005 | Modelo de IA **`claude-haiku-5-5`** (o Haiku mais recente), configurável em `ANTHROPIC_MODEL`. | Rápido e barato para duas tarefas curtas (extração e explicação). | aprovada |
+| D-006 | **Penalização por desigualdade:** score do grupo = média dos scores individuais − 0,5 × (50 − pior score individual), aplicada só quando o pior score fica abaixo de 50. | Simples de explicar na apresentação e evita escolher um lugar ótimo para quatro e péssimo para um. | aprovada |
+| D-007 | Sem `DATABASE_URL`, o backend usa **SQLite local** para desenvolvimento. Os testes rodam em SQLite em memória; produção usa Postgres com as migrations SQL versionadas. | Permite rodar e testar tudo sem conta externa. O teste contra o Postgres real é feito assim que a connection string estiver disponível. | técnica |
+| D-008 | Os commits vão direto na branch `main`, um por fase. | Repositório novo, uma pessoa, prazo de 3 dias. | técnica |
+| D-009 | O PDF do case e o `ifood.docx` ficam **fora do repositório público** (`.gitignore`). O conteúdo relevante é resumido nestes documentos. | O briefing é material do processo seletivo; publicá-lo não é necessário para usar ou avaliar a solução. | técnica |

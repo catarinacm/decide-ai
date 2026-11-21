@@ -1,0 +1,35 @@
+# Segredos: nunca versionar
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+*.db
+*.sqlite3
+
+# Node / frontend
+node_modules/
+frontend/dist/
+.vercel/
+
+# Playwright
+test-results/
+playwright-report/
+
+# Material do processo seletivo: fica só local (ver docs/DECISIONS.md, D-009)
+docs/*.pdf
+docs/*.docx
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
