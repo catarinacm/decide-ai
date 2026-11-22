@@ -80,7 +80,7 @@ function IdentityBar({ group, onChanged }) {
         >
           {session.identities.map((i) => (
             <option key={i.participant_id} value={i.participant_id}>
-              {i.nickname}{i.is_organizer ? ' (organiza)' : ''}
+              {i.nickname}{i.is_organizer ? ' · organizador(a)' : ''}
             </option>
           ))}
         </select>

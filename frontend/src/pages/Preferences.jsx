@@ -209,7 +209,7 @@ function GroupPanel() {
           <li key={p.id} className="flex items-center justify-between py-2.5">
             <span className="flex items-center gap-2 font-medium">
               {p.nickname}
-              {p.is_organizer && <Badge>organiza</Badge>}
+              {p.is_organizer && <Badge>organizador(a)</Badge>}
             </span>
             {p.has_preferences ? <Badge tone="green">✓ respondeu</Badge> : <Badge tone="amber">aguardando</Badge>}
           </li>
