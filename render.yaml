@@ -4,7 +4,7 @@ services:
     name: decide-ai-api
     runtime: python
     plan: free
-    region: oregon
+    region: ohio
     buildCommand: pip install -r backend/requirements.txt
     # Aplica as migrations pendentes (idempotente) e sobe a API atrás do proxy do Render.
     startCommand: python backend/scripts/migrate.py && cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips "*"
