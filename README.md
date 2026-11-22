@@ -4,10 +4,11 @@ Solução para o **case AI Builder do iFood, opção 3 (Decisão em grupo)**: aj
 
 | | |
 |---|---|
-| **App** | __APP_URL__ |
-| **Demonstração direta** | __APP_URL__/demo (cria um grupo com 4 amigos fictícios já preenchidos) |
-| **API** | __API_URL__ ([documentação interativa](__API_URL__/docs)) |
-| **Métricas (restritas)** | __APP_URL__/metricas, só com a chave `ADMIN_TOKEN` |
+| **App** | https://decide-ai-pi.vercel.app |
+| **Demonstração direta** | https://decide-ai-pi.vercel.app/demo (cria um grupo com 4 amigos fictícios já preenchidos) |
+| **API** | https://decide-ai-api.onrender.com ([documentação interativa](https://decide-ai-api.onrender.com/docs)) |
+| **Métricas (restritas)** | https://decide-ai-pi.vercel.app/metricas, só com a chave `ADMIN_TOKEN` |
+| **Código** | https://github.com/catarinacm/decide-ai |
 
 > Protótipo criado para o case AI Builder, proposta para o Comer Fora. Dados 100% fictícios, sem vínculo oficial com o iFood: o produto não usa nome, logo nem marca do iFood. Restaurantes, avaliações, benefícios e disponibilidade são inventados, e toda reserva é **simulada** (na interface e no banco, `is_simulated = true`). Não usa marca, dados internos ou dados de clientes do iFood. Participantes usam apelidos.
 >
@@ -169,12 +170,16 @@ Com Postgres, coloque a connection string do Supabase (Session pooler) em `DATAB
 .venv/Scripts/pip install pytest httpx
 .venv/Scripts/python -m pytest tests/                       # motor, API, IA mockada e os 8 critérios de aceite
 python data/validate_seed.py                                # valida a base de restaurantes
-python backend/scripts/acceptance.py __API_URL__            # 8 critérios contra a API publicada
-python tests/e2e/ui_flow.py __APP_URL__                     # interface com Playwright (pip install playwright)
+python backend/scripts/acceptance.py https://decide-ai-api.onrender.com            # 8 critérios contra a API publicada
+python tests/e2e/ui_flow.py https://decide-ai-pi.vercel.app                     # interface com Playwright (pip install playwright)
 ```
 
 ## Deploy
 
-- **Backend:** Render Blueprint ([render.yaml](render.yaml)). Aplica as migrations no start. Variáveis no painel: `DATABASE_URL`, `ANTHROPIC_API_KEY`, `CORS_ORIGINS`, `FRONTEND_URL` e `ADMIN_TOKEN`.
-- **Frontend:** Vercel, com raiz `frontend/` e a variável `VITE_API_URL` apontando para o Render; [vercel.json](frontend/vercel.json) faz o rewrite de SPA.
-- **Banco:** Supabase (PostgreSQL), acessado só pelo backend; RLS ativo sem policies.
+| Parte | Onde | Detalhes |
+|---|---|---|
+| Frontend | Vercel, projeto `decide-ai` | Raiz `frontend/`, preset Vite, `VITE_API_URL=https://decide-ai-api.onrender.com`. Domínio `decide-ai-pi.vercel.app`, porque `decide-ai.vercel.app` já pertence a outro projeto. [vercel.json](frontend/vercel.json) faz o rewrite de SPA. Cada push na `main` publica sozinho. |
+| Backend | Render, Blueprint [render.yaml](render.yaml), serviço `decide-ai-api` (plano free, região Ohio) | O start aplica as migrations pendentes, que são idempotentes. Variáveis no painel: `DATABASE_URL`, `ADMIN_TOKEN`, `CORS_ORIGINS` e `FRONTEND_URL` (os dois últimos com `https://decide-ai-pi.vercel.app`), e `ANTHROPIC_API_KEY`, que é opcional. |
+| Banco | Supabase (PostgreSQL), região East US (Ohio), conexão por Session pooler | Acessado só pelo backend; RLS ativo em todas as tabelas, sem policies. |
+
+**Antes de apresentar:** o plano gratuito do Render hiberna depois de 15 minutos sem uso, e o primeiro acesso leva cerca de 1 minuto. A interface avisa "Acordando o servidor". Abra o link uns 5 minutos antes.
