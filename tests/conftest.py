@@ -7,8 +7,8 @@ os.environ["DATABASE_URL"] = "sqlite://"
 os.environ["ANTHROPIC_API_KEY"] = ""
 os.environ["RATE_LIMIT_ENABLED"] = "false"
 os.environ["ADMIN_TOKEN"] = "chave-de-teste"
-os.environ["FRONTEND_URL"] = "https://decide-ai.vercel.app"
-os.environ["CORS_ORIGINS"] = "http://localhost:5173,https://decide-ai.vercel.app"
+os.environ["FRONTEND_URL"] = "https://decide-ai-pi.vercel.app"
+os.environ["CORS_ORIGINS"] = "http://localhost:5173,https://decide-ai-pi.vercel.app"
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))

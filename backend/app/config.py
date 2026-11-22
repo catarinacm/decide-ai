@@ -33,8 +33,9 @@ class Settings:
         self.ai_enabled = _bool("AI_ENABLED", True) and bool(self.anthropic_api_key)
         self.cors_origins = [o.strip() for o in os.getenv(
             "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if o.strip()]
-        # Permite as URLs de preview da Vercel do próprio projeto (decide-ai-*.vercel.app).
-        self.cors_origin_regex = os.getenv("CORS_ORIGIN_REGEX", r"https://decide-ai(-[a-z0-9-]+)?\.vercel\.app")
+        # Domínio de produção na Vercel e as URLs de preview só desta conta (decide-<hash>-catarinacm.vercel.app).
+        self.cors_origin_regex = os.getenv(
+            "CORS_ORIGIN_REGEX", r"https://(decide-ai-pi|decide-[a-z0-9-]+-catarinacm)\.vercel\.app")
         self.frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173").rstrip("/")
         self.rate_limit_enabled = _bool("RATE_LIMIT_ENABLED", True)
         # Chave privada da dona do produto para ver as métricas. Sem ela, /metrics fica fechado.

@@ -16,7 +16,7 @@ def test_criar_encontro_gera_convite_e_tokens(flow):
     data = flow.create()
     g = data["group"]
     assert len(g["invite_code"]) == 8 and set(g["invite_code"]) <= set(INVITE_ALPHABET)
-    assert g["invite_url"] == f"https://decide-ai.vercel.app/entrar/{g['invite_code']}"
+    assert g["invite_url"] == f"https://decide-ai-pi.vercel.app/entrar/{g['invite_code']}"
     assert g["status"] == "coletando_preferencias"
     assert data["organizer_token"] != data["identity"]["token"]
     assert len(data["organizer_token"]) >= 40
@@ -431,9 +431,9 @@ def test_health_e_meta(client):
 
 
 def test_cors_restrito(client):
-    ok = client.options("/groups", headers={"Origin": "https://decide-ai.vercel.app",
+    ok = client.options("/groups", headers={"Origin": "https://decide-ai-pi.vercel.app",
                                             "Access-Control-Request-Method": "POST"})
-    assert ok.headers.get("access-control-allow-origin") == "https://decide-ai.vercel.app"
+    assert ok.headers.get("access-control-allow-origin") == "https://decide-ai-pi.vercel.app"
     bad = client.options("/groups", headers={"Origin": "https://site-malicioso.com",
                                              "Access-Control-Request-Method": "POST"})
     assert "access-control-allow-origin" not in bad.headers
@@ -450,3 +450,13 @@ def test_rate_limit_na_rota_de_ia(flow, client):
     finally:
         limiter.enabled = False
     assert codes[:10] == [200] * 10 and codes[10] == 429
+
+
+def test_cors_recusa_outros_projetos_da_vercel(client):
+    """Só o domínio de produção e as previews desta conta; 'decide-ai.vercel.app' é de outra pessoa."""
+    for origin, allowed in [("https://decide-ai-pi.vercel.app", True),
+                            ("https://decide-kpbe5ph98-catarinacm.vercel.app", True),
+                            ("https://decide-ai.vercel.app", False),
+                            ("https://decide-ai-qualquer.vercel.app", False)]:
+        r = client.options("/groups", headers={"Origin": origin, "Access-Control-Request-Method": "POST"})
+        assert (r.headers.get("access-control-allow-origin") == origin) is allowed, origin

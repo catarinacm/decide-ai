@@ -1,7 +1,7 @@
 """Teste ponta a ponta da interface com Playwright (navegador de verdade).
 
     python tests/e2e/ui_flow.py http://localhost:5173
-    python tests/e2e/ui_flow.py https://decide-ai.vercel.app
+    python tests/e2e/ui_flow.py https://decide-ai-pi.vercel.app
 
 Fluxo A (desktop): demonstração -> Match -> "ver por que" -> 4 votos trocando de pessoa -> encerrar ->
 reserva simulada -> avaliação -> recarregar a página e conferir que tudo persistiu.
