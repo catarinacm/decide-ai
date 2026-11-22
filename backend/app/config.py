@@ -29,7 +29,7 @@ class Settings:
         self.database_url = normalize_db_url(raw_db) if raw_db else "sqlite:///./decide_ai.db"
         self.anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "").strip()
         self.anthropic_model = os.getenv("ANTHROPIC_MODEL", "claude-haiku-5-5").strip()
-        self.ai_timeout_seconds = float(os.getenv("AI_TIMEOUT_SECONDS", "8"))
+        self.ai_timeout_seconds = float(os.getenv("AI_TIMEOUT_SECONDS", "12"))
         self.ai_enabled = _bool("AI_ENABLED", True) and bool(self.anthropic_api_key)
         self.cors_origins = [o.strip() for o in os.getenv(
             "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if o.strip()]
