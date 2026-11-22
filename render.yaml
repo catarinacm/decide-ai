@@ -1,4 +1,4 @@
-# Blueprint do Render: API do Decide.ai (FastAPI). As chaves são preenchidas no painel (sync: false).
+# Blueprint do Render: API do decide.ai (FastAPI). As chaves são preenchidas no painel (sync: false).
 services:
   - type: web
     name: decide-ai-api

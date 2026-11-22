@@ -1,4 +1,4 @@
-import LogoMark from '../components/LogoMark'
+import { Wordmark } from '../components/LogoMark'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { api } from '../services/api'
@@ -14,9 +14,7 @@ export default function Home() {
 
   return (
     <section className="flex min-h-[calc(100vh-14rem)] flex-col items-center justify-center text-center">
-      <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand shadow-lg shadow-brand/20" aria-hidden>
-        <LogoMark className="h-10 w-10" />
-      </span>
+      <Wordmark size="lg" />
       <h1 className="mt-8 max-w-xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
         Onde todo mundo <span className="text-brand">combina</span>.
       </h1>

@@ -1,4 +1,4 @@
-"""Tabelas do Decide.ai (as 8 do docx + events). Espelham backend/migrations/001_schema.sql."""
+"""Tabelas do decide.ai (as 8 do docx + events). Espelham backend/migrations/001_schema.sql."""
 from __future__ import annotations
 
 import uuid

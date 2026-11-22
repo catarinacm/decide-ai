@@ -84,7 +84,7 @@ function RecommendationCard({ rec, onVote }) {
       </div>
 
       <div className="border-t border-line bg-canvas/60 p-5">
-        <h4 className="text-sm font-bold">Por que o Decide.ai recomendou este restaurante?</h4>
+        <h4 className="text-sm font-bold">Por que o decide.ai recomendou este restaurante?</h4>
         <p className="mt-2 text-sm leading-relaxed">{rec.explanation}</p>
         <p className="mt-3 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">
           <strong>Ponto de atenção:</strong> {rec.attention_point}

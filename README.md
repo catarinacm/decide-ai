@@ -1,4 +1,4 @@
-# Decide.ai — Onde todo mundo combina
+# decide.ai — Onde todo mundo combina
 
 Solução para o **case AI Builder do iFood, opção 3 (Decisão em grupo)**: ajudar um grupo de amigos, com orçamento fixo, a decidir onde comer fora, reservar e voltar.
 
@@ -103,7 +103,7 @@ S = 0,40·G + 0,25·P + 0,20·L + 0,15·A
 
 **Score do grupo** = média dos individuais − 0,5 × (50 − pior individual), quando o pior fica abaixo de 50. Um lugar ótimo para quatro e péssimo para um perde para um lugar bom para todos.
 
-**Etapa C — IA.** A IA recebe só o top 3 elegível, os scores e um resumo das preferências, e escreve "Por que o Decide.ai recomendou este restaurante?" com o principal ponto de atenção. Guardrails no código descartam a explicação que cite outro restaurante, invente preço ou afirme segurança alimentar. Se a API falhar ou passar de 8 s, a explicação vem de um template com os mesmos dados.
+**Etapa C — IA.** A IA recebe só o top 3 elegível, os scores e um resumo das preferências, e escreve "Por que o decide.ai recomendou este restaurante?" com o principal ponto de atenção. Guardrails no código descartam a explicação que cite outro restaurante, invente preço ou afirme segurança alimentar. Se a API falhar ou passar de 8 s, a explicação vem de um template com os mesmos dados.
 
 **Regras de negócio** (todas com teste):
 

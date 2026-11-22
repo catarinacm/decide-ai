@@ -1,18 +1,33 @@
-/** Símbolo do Decide.ai: uma pessoa pensando (cabeça e ombros com balões de pensamento). Desenho próprio. */
-export default function LogoMark({ className = 'h-6 w-6', color = '#fff' }) {
+/**
+ * Símbolo do decide.ai: dois balões de conversa, e o da frente traz um check.
+ * A conversa do grupo vira uma decisão. Desenho próprio em SVG.
+ * Uso padrão: branco sobre o quadrado vermelho; `checkColor` é a cor do check dentro do balão.
+ */
+export default function LogoMark({ className = 'h-6 w-6', color = '#fff', checkColor = '#EA1D2C' }) {
   return (
-    <svg viewBox="0 0 32 32" className={className} aria-hidden="true" fill={color}>
-      {/* cabeça e ombros */}
-      <circle cx="11.5" cy="17" r="4.6" />
-      <path d="M3.5 29c0-4.6 3.6-7.6 8-7.6s8 3 8 7.6z" />
-      {/* balões de pensamento */}
-      <circle cx="18.6" cy="12.4" r="1.2" />
-      <circle cx="21.4" cy="9.4" r="1.6" />
-      {/* nuvem */}
-      <circle cx="23.6" cy="5.6" r="2.4" />
-      <circle cx="26.8" cy="5" r="2.6" />
-      <circle cx="28.6" cy="7.2" r="1.8" />
-      <rect x="23.6" y="5.6" width="5" height="3.4" rx="1.7" />
+    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
+      <path d="M5 6.5h13a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H10l-4 3.5V18.5H5a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z"
+        fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M14 12.5h13a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-1v3.5l-4-3.5h-8a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3z" fill={color} />
+      <path d="M16.8 19l2.6 2.6 5.2-5.4" fill="none" stroke={checkColor} strokeWidth="2.4" strokeLinecap="round"
+        strokeLinejoin="round" />
     </svg>
+  )
+}
+
+/** Logo completa: símbolo no quadrado vermelho + a palavra "decide.ai". */
+export function Wordmark({ size = 'md' }) {
+  const box = size === 'lg' ? 'h-14 w-14 rounded-2xl' : 'h-9 w-9 rounded-xl'
+  const icon = size === 'lg' ? 'h-9 w-9' : 'h-6 w-6'
+  const text = size === 'lg' ? 'text-3xl' : 'text-lg'
+  return (
+    <span className="flex items-center gap-2">
+      <span className={`flex items-center justify-center bg-brand ${box}`} aria-hidden>
+        <LogoMark className={icon} />
+      </span>
+      <span className={`${text} font-extrabold leading-none tracking-tight text-ink`}>
+        decide<span className="text-brand">.ai</span>
+      </span>
+    </span>
   )
 }

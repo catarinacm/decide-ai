@@ -1,4 +1,4 @@
-"""Motor de recomendação do Decide.ai.
+"""Motor de recomendação do decide.ai.
 
 Funções puras, sem banco nem IA, para poderem ser testadas isoladamente.
 

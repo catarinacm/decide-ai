@@ -1,4 +1,4 @@
-"""IA generativa do Decide.ai (API da Anthropic), chamada só pelo backend.
+"""IA generativa do decide.ai (API da Anthropic), chamada só pelo backend.
 
 Função A - interpretar texto livre de preferências em JSON estruturado (a pessoa confere antes de salvar).
 Função B - explicar as recomendações que o algoritmo já escolheu.
@@ -27,12 +27,12 @@ from app.services.matching import Recommendation
 
 log = logging.getLogger("decide_ai.ai")
 
-PROMPT_VERSION = "v2"
+PROMPT_VERSION = "v3"
 
 # ----------------------------------------------------------------- prompts
 
 PARSE_SYSTEM = f"""Você converte o texto livre de uma pessoa sobre onde quer comer em preferências estruturadas \
-para o Decide.ai, um protótipo que ajuda grupos de amigos a escolher restaurantes.
+para o decide.ai, um protótipo que ajuda grupos de amigos a escolher restaurantes.
 
 Regras:
 - Use somente estes valores, exatamente como escritos.
@@ -49,7 +49,7 @@ Regras:
 - additional_preferences: resuma em até 120 caracteres o que for relevante e não couber nos campos.
 - Não invente nada que não esteja no texto. Na dúvida, deixe vazio."""
 
-EXPLAIN_SYSTEM = """Você escreve, em português do Brasil, a explicação "Por que o Decide.ai recomendou este \
+EXPLAIN_SYSTEM = """Você escreve, em português do Brasil, a explicação "Por que o decide.ai recomendou este \
 restaurante?" para um grupo de amigos. O algoritmo já escolheu e ordenou os restaurantes; você só explica.
 
 Regras obrigatórias:
