@@ -1,7 +1,7 @@
 """Teste ponta a ponta da interface com Playwright (navegador de verdade).
 
     python tests/e2e/ui_flow.py http://localhost:5173
-    python tests/e2e/ui_flow.py https://ifood-match.vercel.app
+    python tests/e2e/ui_flow.py https://decide-ai.vercel.app
 
 Fluxo A (desktop): demonstração -> Match -> "ver por que" -> 4 votos trocando de pessoa -> encerrar ->
 reserva simulada -> avaliação -> recarregar a página e conferir que tudo persistiu.
@@ -68,7 +68,8 @@ def flow_demo(page: Page, base: str, r: Report, tag: str = "A"):
         page.goto(base, timeout=WAKE_TIMEOUT)
         expect(page.get_by_role("heading", name=re.compile("Onde todo mundo"))).to_be_visible()
         expect(page.get_by_role("link", name="Criar encontro")).to_have_count(1)  # só o botão principal
-        expect(page.get_by_text("Protótipo de case")).to_be_visible()
+        expect(page.get_by_text("Protótipo criado para o case AI Builder")).to_be_visible()
+        assert "iFood" not in page.locator("header").inner_text()  # marca só no rodapé
         shot(page, f"{tag.lower()}1_inicio")
     with r.step(f"{tag}2. Exemplo pronto abre um grupo com 4 pessoas"):
         page.get_by_role("link", name="ou veja um exemplo pronto").click()
@@ -78,7 +79,7 @@ def flow_demo(page: Page, base: str, r: Report, tag: str = "A"):
     with r.step(f"{tag}3. Gerar Match mostra o top 3 com explicação e ponto de atenção"):
         page.get_by_role("button", name="Gerar Match").click()
         page.wait_for_url(re.compile(r"/match$"), timeout=WAKE_TIMEOUT)
-        expect(page.get_by_text("Por que o iFood Match recomendou este restaurante?")).to_have_count(3, timeout=30_000)
+        expect(page.get_by_text("Por que o Decide.ai recomendou este restaurante?")).to_have_count(3, timeout=30_000)
         expect(page.locator("strong", has_text="Ponto de atenção:")).to_have_count(3)
         page.get_by_role("button", name=re.compile("Ver por que")).first.click()
         expect(page.get_by_text("Score individual = 0,40·G")).to_be_visible()
@@ -151,7 +152,7 @@ def flow_mobile(page: Page, base: str, r: Report):
         expect(page.get_by_text("3 de 3 com preferências")).to_be_visible(timeout=15_000)
         page.get_by_role("button", name="Gerar Match").click()
         page.wait_for_url(re.compile(r"/match$"), timeout=WAKE_TIMEOUT)
-        expect(page.get_by_text("Por que o iFood Match recomendou este restaurante?").first).to_be_visible(timeout=30_000)
+        expect(page.get_by_text("Por que o Decide.ai recomendou este restaurante?").first).to_be_visible(timeout=30_000)
         no_horizontal_scroll(page)
         shot(page, "b3_match_celular")
 

@@ -1,4 +1,4 @@
-# iFood Match — Onde todo mundo combina
+# Decide.ai — Onde todo mundo combina
 
 Solução para o **case AI Builder do iFood, opção 3 (Decisão em grupo)**: ajudar um grupo de amigos, com orçamento fixo, a decidir onde comer fora, reservar e voltar.
 
@@ -9,7 +9,7 @@ Solução para o **case AI Builder do iFood, opção 3 (Decisão em grupo)**: aj
 | **API** | __API_URL__ ([documentação interativa](__API_URL__/docs)) |
 | **Métricas (restritas)** | __APP_URL__/metricas, só com a chave `ADMIN_TOKEN` |
 
-> Protótipo de case com dados 100% fictícios. Restaurantes, avaliações, benefícios e disponibilidade são inventados, e toda reserva é **simulada** (na interface e no banco, `is_simulated = true`). Não usa marca, dados internos ou dados de clientes do iFood. Participantes usam apelidos.
+> Protótipo criado para o case AI Builder, proposta para o Comer Fora. Dados 100% fictícios, sem vínculo oficial com o iFood: o produto não usa nome, logo nem marca do iFood. Restaurantes, avaliações, benefícios e disponibilidade são inventados, e toda reserva é **simulada** (na interface e no banco, `is_simulated = true`). Não usa marca, dados internos ou dados de clientes do iFood. Participantes usam apelidos.
 >
 > A API roda no plano gratuito do Render, que hiberna: o primeiro acesso pode levar cerca de 1 minuto (a interface avisa "Acordando o servidor"). Antes de apresentar, abra o link alguns minutos antes.
 
@@ -103,7 +103,7 @@ S = 0,40·G + 0,25·P + 0,20·L + 0,15·A
 
 **Score do grupo** = média dos individuais − 0,5 × (50 − pior individual), quando o pior fica abaixo de 50. Um lugar ótimo para quatro e péssimo para um perde para um lugar bom para todos.
 
-**Etapa C — IA.** A IA recebe só o top 3 elegível, os scores e um resumo das preferências, e escreve "Por que o iFood Match recomendou este restaurante?" com o principal ponto de atenção. Guardrails no código descartam a explicação que cite outro restaurante, invente preço ou afirme segurança alimentar. Se a API falhar ou passar de 8 s, a explicação vem de um template com os mesmos dados.
+**Etapa C — IA.** A IA recebe só o top 3 elegível, os scores e um resumo das preferências, e escreve "Por que o Decide.ai recomendou este restaurante?" com o principal ponto de atenção. Guardrails no código descartam a explicação que cite outro restaurante, invente preço ou afirme segurança alimentar. Se a API falhar ou passar de 8 s, a explicação vem de um template com os mesmos dados.
 
 **Regras de negócio** (todas com teste):
 

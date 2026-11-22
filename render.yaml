@@ -1,7 +1,7 @@
-# Blueprint do Render: API do iFood Match (FastAPI). As chaves são preenchidas no painel (sync: false).
+# Blueprint do Render: API do Decide.ai (FastAPI). As chaves são preenchidas no painel (sync: false).
 services:
   - type: web
-    name: ifood-match-api
+    name: decide-ai-api
     runtime: python
     plan: free
     region: oregon

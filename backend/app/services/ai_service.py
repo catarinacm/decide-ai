@@ -1,4 +1,4 @@
-"""IA generativa do iFood Match (API da Anthropic), chamada só pelo backend.
+"""IA generativa do Decide.ai (API da Anthropic), chamada só pelo backend.
 
 Função A - interpretar texto livre de preferências em JSON estruturado (a pessoa confere antes de salvar).
 Função B - explicar as recomendações que o algoritmo já escolheu.
@@ -25,14 +25,14 @@ from app.reference import AMBIENCES, CUISINES, DIETS, NEIGHBORHOODS, cuisine_lab
 from app.schemas import ParsedPreferences
 from app.services.matching import Recommendation
 
-log = logging.getLogger("ifood_match.ai")
+log = logging.getLogger("decide_ai.ai")
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 
 # ----------------------------------------------------------------- prompts
 
 PARSE_SYSTEM = f"""Você converte o texto livre de uma pessoa sobre onde quer comer em preferências estruturadas \
-para o iFood Match, um protótipo que ajuda grupos de amigos a escolher restaurantes.
+para o Decide.ai, um protótipo que ajuda grupos de amigos a escolher restaurantes.
 
 Regras:
 - Use somente estes valores, exatamente como escritos.
@@ -49,7 +49,7 @@ Regras:
 - additional_preferences: resuma em até 120 caracteres o que for relevante e não couber nos campos.
 - Não invente nada que não esteja no texto. Na dúvida, deixe vazio."""
 
-EXPLAIN_SYSTEM = """Você escreve, em português do Brasil, a explicação "Por que o iFood Match recomendou este \
+EXPLAIN_SYSTEM = """Você escreve, em português do Brasil, a explicação "Por que o Decide.ai recomendou este \
 restaurante?" para um grupo de amigos. O algoritmo já escolheu e ordenou os restaurantes; você só explica.
 
 Regras obrigatórias:

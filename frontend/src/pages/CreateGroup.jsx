@@ -50,7 +50,7 @@ export default function CreateGroup() {
 
   if (created) {
     const link = `${window.location.origin}/entrar/${created.invite_code}`
-    const msg = `Bora decidir onde comer? Entra no "${created.name}" pelo iFood Match e conta o que você prefere: ${link}`
+    const msg = `Bora decidir onde comer? Entra no "${created.name}" pelo Decide.ai e conta o que você prefere: ${link}`
     return (
       <div className="mx-auto flex max-w-xl flex-col gap-5">
         <Section title="Encontro criado!" subtitle="Mande o link no grupo. Cada pessoa entra com um apelido e diz o que prefere.">

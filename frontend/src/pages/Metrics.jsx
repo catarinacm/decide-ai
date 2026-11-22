@@ -13,7 +13,7 @@ function Stat({ label, value, hint }) {
   )
 }
 
-const TOKEN_KEY = 'ifoodmatch:adminToken'
+const TOKEN_KEY = 'decideai:adminToken'
 
 function readToken() {
   try {

@@ -25,7 +25,7 @@ DIALECT = postgresql.dialect()
 
 
 def schema_sql() -> str:
-    parts = ["-- 001_schema.sql: esquema do iFood Match (gerado por backend/scripts/build_migrations.py)",
+    parts = ["-- 001_schema.sql: esquema do Decide.ai (gerado por backend/scripts/build_migrations.py)",
              "-- Tabelas do docx: restaurants, groups, participants, preferences, recommendations, votes,",
              "-- reservations, reviews; mais events para as métricas do funil.", "",
              "CREATE EXTENSION IF NOT EXISTS pgcrypto;", ""]

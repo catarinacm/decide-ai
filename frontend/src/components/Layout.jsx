@@ -3,7 +3,7 @@ import { WakeBanner } from './ui'
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight text-ink" aria-label="iFood Match, início">
+    <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight text-ink" aria-label="Decide.ai, início">
       <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand" aria-hidden>
         <svg viewBox="0 0 32 32" className="h-6 w-6">
           <circle cx="12.5" cy="16" r="6" fill="none" stroke="#fff" strokeWidth="2.6" />
@@ -11,7 +11,7 @@ function Logo() {
         </svg>
       </span>
       <span className="text-lg leading-none">
-        iFood <span className="text-brand">Match</span>
+        Decide<span className="text-brand">.ai</span>
       </span>
     </Link>
   )
@@ -37,8 +37,8 @@ export default function Layout({ children }) {
       <footer className="border-t border-line bg-white">
         <div className="mx-auto max-w-5xl px-4 py-6 text-xs leading-relaxed text-muted">
           <p>
-            Protótipo de case (AI Builder) com dados fictícios: restaurantes e reservas são simulados. Não é um produto
-            oficial do iFood.
+            Protótipo criado para o case AI Builder, proposta para o Comer Fora. Dados fictícios, sem vínculo oficial
+            com o iFood.
           </p>
         </div>
       </footer>

@@ -1,4 +1,4 @@
-"""API do iFood Match (FastAPI)."""
+"""API do Decide.ai (FastAPI)."""
 from __future__ import annotations
 
 import logging
@@ -32,7 +32,7 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(
-    title="iFood Match API",
+    title="Decide.ai API",
     version="1.0.0",
     description="Protótipo de case com dados 100% fictícios. Reservas são sempre simuladas.",
     lifespan=lifespan,

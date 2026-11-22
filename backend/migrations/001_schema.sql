@@ -1,4 +1,4 @@
--- 001_schema.sql: esquema do iFood Match (gerado por backend/scripts/build_migrations.py)
+-- 001_schema.sql: esquema do Decide.ai (gerado por backend/scripts/build_migrations.py)
 -- Tabelas do docx: restaurants, groups, participants, preferences, recommendations, votes,
 -- reservations, reviews; mais events para as métricas do funil.
 

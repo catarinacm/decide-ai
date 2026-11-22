@@ -8,7 +8,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-log = logging.getLogger("ifood_match")
+log = logging.getLogger("decide_ai")
 
 
 class AppError(Exception):

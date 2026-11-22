@@ -1,8 +1,8 @@
 // Credenciais locais. Cada navegador guarda os tokens das pessoas que entraram nele (localStorage).
 // Assim, recarregar a página recupera tudo, e "simular participante" troca de pessoa na mesma aba.
 
-const KEY = 'ifoodmatch:groups'
-const PREFS_KEY = 'ifoodmatch:lastPreferences'
+const KEY = 'decideai:groups'
+const PREFS_KEY = 'decideai:lastPreferences'
 
 function read() {
   try {

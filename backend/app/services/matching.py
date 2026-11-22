@@ -1,4 +1,4 @@
-"""Motor de recomendação do iFood Match.
+"""Motor de recomendação do Decide.ai.
 
 Funções puras, sem banco nem IA, para poderem ser testadas isoladamente.
 

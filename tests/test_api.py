@@ -16,7 +16,7 @@ def test_criar_encontro_gera_convite_e_tokens(flow):
     data = flow.create()
     g = data["group"]
     assert len(g["invite_code"]) == 8 and set(g["invite_code"]) <= set(INVITE_ALPHABET)
-    assert g["invite_url"] == f"https://ifood-match.vercel.app/entrar/{g['invite_code']}"
+    assert g["invite_url"] == f"https://decide-ai.vercel.app/entrar/{g['invite_code']}"
     assert g["status"] == "coletando_preferencias"
     assert data["organizer_token"] != data["identity"]["token"]
     assert len(data["organizer_token"]) >= 40
@@ -431,9 +431,9 @@ def test_health_e_meta(client):
 
 
 def test_cors_restrito(client):
-    ok = client.options("/groups", headers={"Origin": "https://ifood-match.vercel.app",
+    ok = client.options("/groups", headers={"Origin": "https://decide-ai.vercel.app",
                                             "Access-Control-Request-Method": "POST"})
-    assert ok.headers.get("access-control-allow-origin") == "https://ifood-match.vercel.app"
+    assert ok.headers.get("access-control-allow-origin") == "https://decide-ai.vercel.app"
     bad = client.options("/groups", headers={"Origin": "https://site-malicioso.com",
                                              "Access-Control-Request-Method": "POST"})
     assert "access-control-allow-origin" not in bad.headers
