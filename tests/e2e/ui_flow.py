@@ -144,9 +144,16 @@ def flow_mobile(page: Page, base: str, r: Report):
         no_horizontal_scroll(page)
         shot(page, "b2_preferencias_celular")
     with r.step("B3. Adicionar duas pessoas no mesmo aparelho e gerar o Match"):
-        for _ in range(2):
-            page.get_by_role("button", name="+ Adicionar pessoa neste aparelho").click()
-            expect(page.get_by_role("heading", name=re.compile(r"Preferências de (Lia|Theo)"))).to_be_visible(timeout=15_000)
+        # Apelido vazio é recusado na própria tela, sem chamar a API.
+        page.get_by_role("button", name="+ Adicionar pessoa neste aparelho").click()
+        page.get_by_role("button", name="Adicionar", exact=True).click()
+        expect(page.get_by_text("Digite um apelido com pelo menos 2 letras.")).to_be_visible()
+        for nick in ["Bia", "Caio"]:
+            if not page.get_by_label("Apelido da pessoa").is_visible():
+                page.get_by_role("button", name="+ Adicionar pessoa neste aparelho").click()
+            page.get_by_label("Apelido da pessoa").fill(nick)
+            page.get_by_role("button", name="Adicionar", exact=True).click()
+            expect(page.get_by_role("heading", name=f"Preferências de {nick}")).to_be_visible(timeout=15_000)
             page.get_by_role("button", name="Salvar preferências").click()
             page.wait_for_timeout(1200)
         expect(page.get_by_text("3 de 3 com preferências")).to_be_visible(timeout=15_000)

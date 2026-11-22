@@ -6,7 +6,7 @@ import { usePolled } from '../services/hooks'
 import { activeIdentity, getGroupSession, saveIdentity, setActive } from '../services/session'
 import { Badge, ErrorBox, Spinner } from './ui'
 
-// Apelidos para quem entra pelo mesmo aparelho (ex.: amigos dividindo o celular na mesa).
+// Sugestões de apelido (só no placeholder) para quem entra pelo mesmo aparelho.
 const NAMES = ['Lia', 'Theo', 'Nina', 'Rafa', 'Malu', 'Caio', 'Bia', 'Duda', 'Gabi', 'Léo', 'Juju', 'Pedro', 'Mari', 'Tomás']
 
 const GroupCtx = createContext(null)
@@ -34,19 +34,30 @@ function IdentityBar({ group, onChanged }) {
   const me = activeIdentity(group.id)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(null)
+  const [adding, setAdding] = useState(false)
+  const [name, setName] = useState('')
 
-  const simulate = async () => {
+  const taken = new Set(group.participants.map((p) => p.nickname.toLowerCase()))
+  const suggestion = NAMES.find((n) => !taken.has(n.toLowerCase())) || 'Amigo'
+
+  const add = async (e) => {
+    e.preventDefault()
+    const nickname = name.trim()
+    if (nickname.length < 2) {
+      setError({ message: 'Digite um apelido com pelo menos 2 letras.' })
+      return
+    }
     setBusy(true)
     setError(null)
     try {
-      const taken = new Set(group.participants.map((p) => p.nickname.toLowerCase()))
-      const nickname = NAMES.find((n) => !taken.has(n.toLowerCase())) || `Amigo ${group.participants.length + 1}`
       const out = await api.join({ invite_code: group.invite_code, nickname, is_simulated: true })
       saveIdentity(group.id, out.identity)
+      setAdding(false)
+      setName('')
       await onChanged()
       navigate(`/g/${group.id}/preferencias`)
-    } catch (e) {
-      setError(e)
+    } catch (err) {
+      setError(err)
     } finally {
       setBusy(false)
     }
@@ -74,10 +85,31 @@ function IdentityBar({ group, onChanged }) {
           ))}
         </select>
       </label>
-      {group.accepting_changes && (
-        <button type="button" className="btn-ghost justify-start text-sm text-brand sm:justify-center" onClick={simulate} disabled={busy}>
+      {group.accepting_changes && !adding && (
+        <button type="button" className="btn-ghost justify-start text-sm text-brand sm:justify-center"
+          onClick={() => { setAdding(true); setError(null) }}>
           + Adicionar pessoa neste aparelho
         </button>
+      )}
+      {adding && (
+        <form onSubmit={add} className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
+          <input
+            className="input py-2 text-sm sm:w-44"
+            value={name}
+            onChange={(e) => { setName(e.target.value); setError(null) }}
+            placeholder={`Apelido, ex.: ${suggestion}`}
+            aria-label="Apelido da pessoa"
+            maxLength={30}
+            autoComplete="off"
+            autoFocus
+          />
+          <div className="flex gap-2">
+            <button className="btn-primary flex-1 py-2 text-sm" disabled={busy}>{busy ? 'Adicionando...' : 'Adicionar'}</button>
+            <button type="button" className="btn-ghost text-sm" onClick={() => { setAdding(false); setName(''); setError(null) }}>
+              Cancelar
+            </button>
+          </div>
+        </form>
       )}
       <ErrorBox error={error} />
     </div>
