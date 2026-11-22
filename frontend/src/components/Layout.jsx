@@ -25,8 +25,7 @@ export default function Layout({ children }) {
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
           <Logo />
           <nav className="flex items-center gap-1 text-sm font-semibold">
-            <NavLink to="/criar" className="btn-ghost hidden sm:inline-flex">Criar encontro</NavLink>
-            <NavLink to="/metricas" className="btn-ghost">Métricas</NavLink>
+            <NavLink to="/criar" className="btn-primary px-4 py-2 text-sm">Criar encontro</NavLink>
           </nav>
         </div>
       </header>
@@ -34,9 +33,8 @@ export default function Layout({ children }) {
       <footer className="border-t border-line bg-white">
         <div className="mx-auto max-w-5xl px-4 py-6 text-xs leading-relaxed text-muted">
           <p>
-            <strong>Protótipo de case (AI Builder)</strong> com dados 100% fictícios: restaurantes, avaliações,
-            benefícios e disponibilidade são inventados, e toda reserva é simulada. Não é um produto oficial do iFood
-            e não usa marca, dados internos ou dados de clientes. Participantes usam apenas apelidos.
+            Protótipo de case (AI Builder) com dados fictícios: restaurantes e reservas são simulados. Não é um produto
+            oficial do iFood.
           </p>
         </div>
       </footer>

@@ -411,14 +411,17 @@ def test_metricas_do_funil(flow, client):
     other = type(flow)(client)
     other.create(organizer="Zeca")
 
-    m = client.get("/metrics").json()
+    from conftest import ADMIN
+    assert client.get("/metrics").status_code == 403
+    assert client.get("/metrics", headers={"X-Admin-Token": "errada"}).status_code == 403
+    m = client.get("/metrics", headers=ADMIN).json()
     steps = {s["step"]: s["groups"] for s in m["funnel"]}
     assert steps == {"group_created": 2, "preferences_completed": 1, "recommendations_viewed": 1,
                      "choice_completed": 1, "reservation_simulated": 1}
     assert m["main_metric"]["value_pct"] == 50.0
     assert m["avg_minutes_to_decision"] is not None
     assert "Não são conversões reais" in m["notice"]
-    assert client.get("/metrics?include_demo=true").json()["funnel"][0]["groups"] == 3
+    assert client.get("/metrics?include_demo=true", headers=ADMIN).json()["funnel"][0]["groups"] == 3
 
 
 def test_health_e_meta(client):

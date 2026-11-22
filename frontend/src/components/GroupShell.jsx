@@ -6,6 +6,9 @@ import { usePolled } from '../services/hooks'
 import { activeIdentity, getGroupSession, saveIdentity, setActive } from '../services/session'
 import { Badge, ErrorBox, Spinner } from './ui'
 
+// Apelidos para quem entra pelo mesmo aparelho (ex.: amigos dividindo o celular na mesa).
+const NAMES = ['Lia', 'Theo', 'Nina', 'Rafa', 'Malu', 'Caio', 'Bia', 'Duda', 'Gabi', 'Léo', 'Juju', 'Pedro', 'Mari', 'Tomás']
+
 const GroupCtx = createContext(null)
 export const useGroup = () => useContext(GroupCtx)
 
@@ -37,9 +40,8 @@ function IdentityBar({ group, onChanged }) {
     setError(null)
     try {
       const taken = new Set(group.participants.map((p) => p.nickname.toLowerCase()))
-      let n = group.participants.filter((p) => p.is_simulated).length + 1
-      while (taken.has(`convidado ${n}`)) n += 1
-      const out = await api.join({ invite_code: group.invite_code, nickname: `Convidado ${n}`, is_simulated: true })
+      const nickname = NAMES.find((n) => !taken.has(n.toLowerCase())) || `Amigo ${group.participants.length + 1}`
+      const out = await api.join({ invite_code: group.invite_code, nickname, is_simulated: true })
       saveIdentity(group.id, out.identity)
       await onChanged()
       navigate(`/g/${group.id}/preferencias`)
@@ -67,14 +69,14 @@ function IdentityBar({ group, onChanged }) {
         >
           {session.identities.map((i) => (
             <option key={i.participant_id} value={i.participant_id}>
-              {i.nickname}{i.is_organizer ? ' (organizador)' : ''}{i.is_simulated ? ' · simulado' : ''}
+              {i.nickname}{i.is_organizer ? ' (organiza)' : ''}
             </option>
           ))}
         </select>
       </label>
       {group.accepting_changes && (
         <button type="button" className="btn-ghost justify-start text-sm text-brand sm:justify-center" onClick={simulate} disabled={busy}>
-          + Simular participante
+          + Adicionar pessoa neste aparelho
         </button>
       )}
       <ErrorBox error={error} />
@@ -116,7 +118,6 @@ export default function GroupShell({ children, poll = 4000 }) {
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <h1 className="text-xl font-extrabold sm:text-2xl">{group.name}</h1>
-                {group.is_demo && <Badge tone="dark">Demonstração</Badge>}
               </div>
               <p className="mt-1 text-sm text-muted">
                 {dateLabel(group.event_date)} · {group.event_time} · {group.neighborhood}

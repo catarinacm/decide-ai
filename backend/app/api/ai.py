@@ -17,11 +17,7 @@ router = APIRouter(tags=["ia"])
 
 
 def _message(result) -> str:
-    if result.source == "ia":
-        return "Preenchemos o formulário com o que entendemos. Confira e corrija antes de salvar."
-    if result.error == "ia_desativada":
-        return "A IA está desligada neste ambiente; preenchemos por palavras-chave. Confira antes de salvar."
-    return "A IA não respondeu desta vez; preenchemos por palavras-chave. Confira antes de salvar."
+    return "Preenchemos o formulário a partir do seu texto. Confira e corrija antes de salvar."
 
 
 @router.post("/ai/parse-preferences")

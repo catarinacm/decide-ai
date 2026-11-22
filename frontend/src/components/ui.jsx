@@ -120,8 +120,7 @@ export function WakeBanner() {
       <div className="flex max-w-md items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-sm text-white shadow-lg">
         <span className="h-4 w-4 shrink-0 animate-spin rounded-full border-2 border-white border-t-transparent" />
         <span>
-          <strong>Acordando o servidor...</strong> Este protótipo usa um plano gratuito que hiberna. O primeiro acesso
-          pode levar até 1 minuto; depois fica rápido.
+          <strong>Acordando o servidor...</strong> O primeiro acesso pode levar até 1 minuto; depois fica rápido.
         </span>
       </div>
     </div>

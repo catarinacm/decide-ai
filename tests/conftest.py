@@ -6,6 +6,7 @@ from pathlib import Path
 os.environ["DATABASE_URL"] = "sqlite://"
 os.environ["ANTHROPIC_API_KEY"] = ""
 os.environ["RATE_LIMIT_ENABLED"] = "false"
+os.environ["ADMIN_TOKEN"] = "chave-de-teste"
 os.environ["FRONTEND_URL"] = "https://ifood-match.vercel.app"
 os.environ["CORS_ORIGINS"] = "http://localhost:5173,https://ifood-match.vercel.app"
 
@@ -40,6 +41,9 @@ def db():
     from app.database import SessionLocal
     with SessionLocal() as s:
         yield s
+
+
+ADMIN = {"X-Admin-Token": "chave-de-teste"}
 
 
 class Flow:

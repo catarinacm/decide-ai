@@ -42,7 +42,7 @@ def next_saturday(today: date) -> date:
 
 def create_demo_group(db: Session) -> dict:
     org_raw, org_hash = new_token()
-    group = GroupRow(invite_code=new_invite_code(), name="Jantar de sábado (demonstração)", occasion="jantar_amigos",
+    group = GroupRow(invite_code=new_invite_code(), name="Jantar de sábado", occasion="jantar_amigos",
                      event_date=next_saturday(today_sp()), event_time="20:00", budget_per_person=100, party_size=4,
                      neighborhood="Pinheiros", organizer_token_hash=org_hash, is_demo=True)
     db.add(group)

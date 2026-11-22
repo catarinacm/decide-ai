@@ -79,7 +79,7 @@ export default function CreateGroup() {
           Preencher minhas preferências
         </button>
         <p className="text-center text-sm text-muted">
-          Testando sozinho? Dentro do encontro, use <strong>Simular participante</strong> para entrar como outra pessoa.
+          Vão usar o mesmo celular? Dentro do encontro, toque em <strong>Adicionar pessoa neste aparelho</strong>.
         </p>
       </div>
     )

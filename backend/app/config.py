@@ -37,6 +37,8 @@ class Settings:
         self.cors_origin_regex = os.getenv("CORS_ORIGIN_REGEX", r"https://ifood-match(-[a-z0-9-]+)?\.vercel\.app")
         self.frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173").rstrip("/")
         self.rate_limit_enabled = _bool("RATE_LIMIT_ENABLED", True)
+        # Chave privada da dona do produto para ver as métricas. Sem ela, /metrics fica fechado.
+        self.admin_token = os.getenv("ADMIN_TOKEN", "").strip()
 
 
 settings = Settings()

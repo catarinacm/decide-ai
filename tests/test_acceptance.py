@@ -17,5 +17,5 @@ def test_dados_sobrevivem_a_reinicio_do_app(client):
     results = run_acceptance(client)
     assert all(r["ok"] for r in results)
     with TestClient(app) as fresh:
-        m = fresh.get("/metrics").json()
+        m = fresh.get("/metrics", headers={"X-Admin-Token": "chave-de-teste"}).json()
         assert m["main_metric"]["numerator"] == 1

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ErrorBox, Section, Spinner } from '../components/ui'
 import { api } from '../services/api'
 import { usePolled } from '../services/hooks'
@@ -13,9 +13,44 @@ function Stat({ label, value, hint }) {
   )
 }
 
+const TOKEN_KEY = 'ifoodmatch:adminToken'
+
+function readToken() {
+  try {
+    return localStorage.getItem(TOKEN_KEY) || ''
+  } catch {
+    return ''
+  }
+}
+
+/** Área interna: só abre com a chave de acesso (ADMIN_TOKEN do backend). Não aparece no menu. */
+function AccessForm({ onSubmit, error }) {
+  const [value, setValue] = useState('')
+  return (
+    <form className="card mx-auto flex max-w-sm flex-col gap-3 p-6"
+      onSubmit={(e) => { e.preventDefault(); onSubmit(value.trim()) }}>
+      <h1 className="text-xl font-bold">Área restrita</h1>
+      <p className="text-sm text-muted">Informe a chave de acesso às métricas.</p>
+      <input className="input" type="password" autoComplete="off" value={value} onChange={(e) => setValue(e.target.value)}
+        aria-label="Chave de acesso" required />
+      {error && <ErrorBox error={error} />}
+      <button className="btn-primary">Entrar</button>
+    </form>
+  )
+}
+
 export default function Metrics() {
+  const [token, setToken] = useState(readToken)
+  if (!token) return <AccessForm onSubmit={(t) => { try { localStorage.setItem(TOKEN_KEY, t) } catch { /* sem persistência */ } setToken(t) }} />
+  return <Dashboard token={token} onDenied={() => { try { localStorage.removeItem(TOKEN_KEY) } catch { /* nada */ } setToken('') }} />
+}
+
+function Dashboard({ token, onDenied }) {
   const [includeDemo, setIncludeDemo] = useState(false)
-  const { data: m, error, loading, reload } = usePolled(() => api.metrics(includeDemo), [includeDemo], 15000)
+  const { data: m, error, loading, reload } = usePolled(() => api.metrics(includeDemo, token), [includeDemo, token], 15000)
+  useEffect(() => {
+    if (error?.status === 403) onDenied()
+  }, [error, onDenied])
 
   return (
     <div className="flex flex-col gap-5">

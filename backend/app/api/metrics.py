@@ -1,12 +1,15 @@
 """Métricas do funil, calculadas da tabela events, e valores de referência para o frontend."""
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends
+import hmac
+
+from fastapi import APIRouter, Depends, Header
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.database import get_db
+from app.errors import AppError
 from app.models.tables import EventRow, GroupRow, ReviewRow
 from app.reference import AMBIENCES, CUISINES, DIETS, NEIGHBORHOODS, OCCASIONS
 from app.services.events import FUNNEL
@@ -17,7 +20,13 @@ METRICS_NOTICE = ("Dados de uso deste protótipo, registrados de verdade a cada 
                   "demonstrações. Não são conversões reais nem resultados de negócio.")
 
 
-@router.get("/metrics")
+def require_admin(x_admin_token: str | None = Header(default=None)) -> None:
+    """Métricas são internas: só quem tem a ADMIN_TOKEN (a dona do produto) vê."""
+    if not settings.admin_token or not x_admin_token or not hmac.compare_digest(x_admin_token, settings.admin_token):
+        raise AppError(403, "acesso_restrito", "Área restrita. Informe a chave de acesso às métricas.")
+
+
+@router.get("/metrics", dependencies=[Depends(require_admin)])
 def metrics(include_demo: bool = False, db: Session = Depends(get_db)):
     q = select(EventRow)
     if not include_demo:

@@ -116,13 +116,9 @@ function Body() {
             </div>
             <div className="p-5 text-sm">
               <p>Código: <span className="font-mono font-bold">{res.confirmation_code}</span></p>
-              <p className="mt-2 text-muted">
-                Nenhuma reserva real foi feita: este é um protótipo com restaurantes fictícios. O registro está marcado
-                como simulado também no banco de dados.
-              </p>
+              <p className="mt-2 text-muted">Reserva simulada: nenhum restaurante foi contatado.</p>
               {!res.restaurant.accepts_reservation && (
-                <p className="mt-2 text-muted">No cadastro fictício, este restaurante normalmente não aceita reservas;
-                  a simulação registra a ida do grupo.</p>
+                <p className="mt-2 text-muted">Este restaurante não costuma aceitar reservas; registramos a ida do grupo.</p>
               )}
             </div>
           </section>
@@ -150,7 +146,7 @@ function Body() {
             <dt className="text-muted">Preço médio</dt><dd>{brl(r.avg_price)} por pessoa</dd>
             <dt className="text-muted">Quem vai</dt><dd>{group.participants.map((p) => p.nickname).join(', ')}</dd>
             <dt className="text-muted">Decisão</dt><dd>{group.decision_note}</dd>
-            {r.simulated_benefit && (<><dt className="text-muted">Benefício</dt><dd>{r.simulated_benefit}</dd></>)}
+            {r.simulated_benefit && (<><dt className="text-muted">Benefício</dt><dd>{r.simulated_benefit.replace(' (simulado)', '')}</dd></>)}
           </dl>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {r.dietary_labels.map((d) => <Badge key={d} tone="green">{d}</Badge>)}

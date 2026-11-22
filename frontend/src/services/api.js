@@ -90,5 +90,6 @@ export const api = {
   review: (groupId, reservationId, body) =>
     request('POST', `/reservations/${reservationId}/reviews`, { body, groupId }),
   demo: () => request('POST', '/demo'),
-  metrics: (includeDemo) => request('GET', `/metrics?include_demo=${includeDemo ? 'true' : 'false'}`),
+  metrics: (includeDemo, adminToken) =>
+    request('GET', `/metrics?include_demo=${includeDemo ? 'true' : 'false'}`, { headers: { 'X-Admin-Token': adminToken } }),
 }

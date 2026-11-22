@@ -68,7 +68,7 @@ function RecommendationCard({ rec, onVote }) {
             <div className="min-w-0">
               <h3 className="text-lg font-extrabold leading-tight">{r.name}</h3>
               <p className="mt-0.5 text-sm text-muted">
-                {r.cuisine_label} · {r.neighborhood} · {brl(r.avg_price)}/pessoa · ★ {r.rating.toFixed(1)} (fictícia)
+                {r.cuisine_label} · {r.neighborhood} · <span className="whitespace-nowrap">{brl(r.avg_price)}/pessoa · ★ {r.rating.toFixed(1)}</span>
               </p>
             </div>
             <ScoreRing score={rec.score} />
@@ -79,17 +79,12 @@ function RecommendationCard({ rec, onVote }) {
             {r.ambience_labels.map((a) => <Badge key={a}>{a}</Badge>)}
             <Badge>média de {km(rec.avg_distance_km)} do grupo</Badge>
           </div>
-          {r.simulated_benefit && <p className="mt-2 text-xs font-semibold text-brand-dark">Benefício simulado: {r.simulated_benefit.replace(' (simulado)', '')}</p>}
+          {r.simulated_benefit && <p className="mt-2 text-xs font-semibold text-brand-dark">🎁 {r.simulated_benefit.replace(' (simulado)', '')}</p>}
         </div>
       </div>
 
       <div className="border-t border-line bg-canvas/60 p-5">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <h4 className="text-sm font-bold">Por que o iFood Match recomendou este restaurante?</h4>
-          <Badge tone={rec.explanation_source === 'ia' ? 'brand' : 'neutral'}>
-            {rec.explanation_source === 'ia' ? 'Explicação gerada por IA' : 'Explicação automática (regras)'}
-          </Badge>
-        </div>
+        <h4 className="text-sm font-bold">Por que o iFood Match recomendou este restaurante?</h4>
         <p className="mt-2 text-sm leading-relaxed">{rec.explanation}</p>
         <p className="mt-3 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">
           <strong>Ponto de atenção:</strong> {rec.attention_point}

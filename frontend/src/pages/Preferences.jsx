@@ -113,7 +113,6 @@ function PreferencesForm() {
           </button>
           {aiNote && (
             <span className="text-sm text-muted">
-              <Badge tone={aiNote.source === 'ia' ? 'brand' : 'neutral'}>{aiNote.source === 'ia' ? 'IA' : 'Regras'}</Badge>{' '}
               {aiNote.message}
             </span>
           )}
@@ -211,7 +210,6 @@ function GroupPanel() {
             <span className="flex items-center gap-2 font-medium">
               {p.nickname}
               {p.is_organizer && <Badge>organiza</Badge>}
-              {p.is_simulated && <Badge>simulado</Badge>}
             </span>
             {p.has_preferences ? <Badge tone="green">✓ respondeu</Badge> : <Badge tone="amber">aguardando</Badge>}
           </li>

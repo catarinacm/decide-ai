@@ -41,11 +41,11 @@ export default function Home() {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link to="/criar" className="btn-primary text-base">Criar encontro</Link>
             <button type="button" className="btn-secondary text-base" onClick={demo} disabled={busy}>
-              Ver demonstração
+              Experimentar agora
             </button>
           </div>
           <p className="mt-3 text-xs text-muted">
-            A demonstração cria um grupo com 4 amigos fictícios já preenchidos, para você ir até a reserva em 2 minutos.
+            Abre um jantar com 4 amigos que já responderam, para você ver o Match na hora.
           </p>
           <ErrorBox error={error} />
         </div>
@@ -66,7 +66,6 @@ export default function Home() {
               <span className="text-sm font-bold text-brand">{s}</span>
             </div>
           ))}
-          <p className="relative mt-4 text-xs text-muted">Exemplo com dados fictícios.</p>
         </div>
       </section>
 

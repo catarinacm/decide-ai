@@ -7,7 +7,7 @@ Solução para o **case AI Builder do iFood, opção 3 (Decisão em grupo)**: aj
 | **App** | __APP_URL__ |
 | **Demonstração direta** | __APP_URL__/demo (cria um grupo com 4 amigos fictícios já preenchidos) |
 | **API** | __API_URL__ ([documentação interativa](__API_URL__/docs)) |
-| **Métricas** | __APP_URL__/metricas |
+| **Métricas (restritas)** | __APP_URL__/metricas, só com a chave `ADMIN_TOKEN` |
 
 > Protótipo de case com dados 100% fictícios. Restaurantes, avaliações, benefícios e disponibilidade são inventados, e toda reserva é **simulada** (na interface e no banco, `is_simulated = true`). Não usa marca, dados internos ou dados de clientes do iFood. Participantes usam apelidos.
 >
@@ -29,25 +29,25 @@ Uma plataforma colaborativa que reúne as preferências de cada pessoa, filtra e
 
 ## Como usar em 2 minutos
 
-1. Abra o app e clique em **Ver demonstração**. Um grupo com Ana (vegetariana), Bruno (orçamento de R$ 60), Carla (mora longe, em Santana) e Davi (sem glúten) já está pronto.
+1. Abra o app e clique em **Experimentar agora**. Um grupo com Ana (vegetariana), Bruno (orçamento de R$ 60), Carla (mora longe, em Santana) e Davi (sem glúten) já está pronto.
 2. Clique em **Gerar Match**. Veja o top 3, a explicação de cada restaurante, o ponto de atenção e, em **Ver por que**, o score de cada pessoa.
 3. Vá para a **Votação**. No seletor "Você está como", troque de pessoa e vote como cada uma. O placar atualiza sozinho.
 4. **Encerre a votação** (em caso de empate, vence o maior score coletivo), **confirme a reserva simulada** e **avalie**.
-5. Recarregue a página: está tudo salvo. Veja o funil em **Métricas**.
+5. Recarregue a página: está tudo salvo. O funil fica em `/metricas`, que exige a chave de acesso.
 
-Para testar do zero: **Criar encontro**, compartilhe o link (ou use **+ Simular participante** para entrar como outras pessoas na mesma aba) e siga o fluxo.
+Para testar do zero: **Criar encontro**, compartilhe o link (ou use **+ Adicionar pessoa neste aparelho** para entrar como outras pessoas na mesma aba) e siga o fluxo.
 
 ## As seis telas
 
 | Tela | O que faz |
 |---|---|
-| Início | Proposta, como funciona em 3 passos, **Criar encontro** e **Ver demonstração** |
+| Início | Proposta, como funciona em 3 passos, **Criar encontro** e **Experimentar agora** (grupo de exemplo pronto) |
 | Criar encontro | Nome, data, horário, orçamento, pessoas, bairro, ocasião e prazo opcional; gera código e link com botões de copiar e de compartilhar no WhatsApp |
 | Preferências | Texto livre com IA, que pré-preenche o formulário; a pessoa confere e salva; painel de quem já respondeu; Match (ou "gerar com quem já respondeu", para o organizador) |
 | Resultados do Match | Top 3 com score, preço, culinária, bairro, distância, explicação da IA, ponto de atenção e detalhamento por participante; estado "nenhum elegível" com sugestões aplicáveis |
 | Votação | Um voto por pessoa (trocar o voto atualiza, não duplica), placar a cada 3 s, encerramento pelo organizador, desempate explicado |
 | Reserva e retorno | Selo **Reserva simulada**, resumo, avaliação de 1 a 5 com comentário e "novo encontro com minhas preferências" |
-| Métricas | Funil real a partir da tabela `events`, tempo até a decisão, participação e uso de IA |
+| Métricas (restrita) | Funil real a partir da tabela `events`, tempo até a decisão, participação e uso de IA; fora do menu e protegida por chave |
 
 ## Arquitetura
 
@@ -175,6 +175,6 @@ python tests/e2e/ui_flow.py __APP_URL__                     # interface com Play
 
 ## Deploy
 
-- **Backend:** Render Blueprint ([render.yaml](render.yaml)). Aplica as migrations no start. Variáveis no painel: `DATABASE_URL`, `ANTHROPIC_API_KEY`, `CORS_ORIGINS` e `FRONTEND_URL`.
+- **Backend:** Render Blueprint ([render.yaml](render.yaml)). Aplica as migrations no start. Variáveis no painel: `DATABASE_URL`, `ANTHROPIC_API_KEY`, `CORS_ORIGINS`, `FRONTEND_URL` e `ADMIN_TOKEN`.
 - **Frontend:** Vercel, com raiz `frontend/` e a variável `VITE_API_URL` apontando para o Render; [vercel.json](frontend/vercel.json) faz o rewrite de SPA.
 - **Banco:** Supabase (PostgreSQL), acessado só pelo backend; RLS ativo sem policies.
