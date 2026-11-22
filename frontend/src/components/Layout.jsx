@@ -1,3 +1,4 @@
+import LogoMark from './LogoMark'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { WakeBanner } from './ui'
 
@@ -5,10 +6,7 @@ function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight text-ink" aria-label="Decide.ai, início">
       <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand" aria-hidden>
-        <svg viewBox="0 0 32 32" className="h-6 w-6">
-          <circle cx="12.5" cy="16" r="6" fill="none" stroke="#fff" strokeWidth="2.6" />
-          <circle cx="19.5" cy="16" r="6" fill="none" stroke="#fff" strokeWidth="2.6" />
-        </svg>
+        <LogoMark className="h-6 w-6" />
       </span>
       <span className="text-lg leading-none">
         Decide<span className="text-brand">.ai</span>
