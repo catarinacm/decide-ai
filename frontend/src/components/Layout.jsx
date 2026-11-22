@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { WakeBanner } from './ui'
 
 function Logo() {
@@ -18,15 +18,19 @@ function Logo() {
 }
 
 export default function Layout({ children }) {
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
   return (
     <div className="flex min-h-screen flex-col">
       <WakeBanner />
       <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
           <Logo />
-          <nav className="flex items-center gap-1 text-sm font-semibold">
-            <NavLink to="/criar" className="btn-primary px-4 py-2 text-sm">Criar encontro</NavLink>
-          </nav>
+          {!isHome && (
+            <nav className="flex items-center gap-1 text-sm font-semibold">
+              <NavLink to="/criar" className="btn-primary px-4 py-2 text-sm">Criar encontro</NavLink>
+            </nav>
+          )}
         </div>
       </header>
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-10">{children}</main>

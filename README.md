@@ -29,7 +29,7 @@ Uma plataforma colaborativa que reúne as preferências de cada pessoa, filtra e
 
 ## Como usar em 2 minutos
 
-1. Abra o app e clique em **Experimentar agora**. Um grupo com Ana (vegetariana), Bruno (orçamento de R$ 60), Carla (mora longe, em Santana) e Davi (sem glúten) já está pronto.
+1. Abra o app e clique em **ou veja um exemplo pronto**, logo abaixo de "Criar encontro" (ou vá direto em `/demo`). Um grupo com Ana (vegetariana), Bruno (orçamento de R$ 60), Carla (mora longe, em Santana) e Davi (sem glúten) já está pronto.
 2. Clique em **Gerar Match**. Veja o top 3, a explicação de cada restaurante, o ponto de atenção e, em **Ver por que**, o score de cada pessoa.
 3. Vá para a **Votação**. No seletor "Você está como", troque de pessoa e vote como cada uma. O placar atualiza sozinho.
 4. **Encerre a votação** (em caso de empate, vence o maior score coletivo), **confirme a reserva simulada** e **avalie**.
@@ -41,7 +41,7 @@ Para testar do zero: **Criar encontro**, compartilhe o link (ou use **+ Adiciona
 
 | Tela | O que faz |
 |---|---|
-| Início | Proposta, como funciona em 3 passos, **Criar encontro** e **Experimentar agora** (grupo de exemplo pronto) |
+| Início | Página limpa: proposta em uma frase, o botão **Criar encontro** e um link discreto para o exemplo pronto |
 | Criar encontro | Nome, data, horário, orçamento, pessoas, bairro, ocasião e prazo opcional; gera código e link com botões de copiar e de compartilhar no WhatsApp |
 | Preferências | Texto livre com IA, que pré-preenche o formulário; a pessoa confere e salva; painel de quem já respondeu; Match (ou "gerar com quem já respondeu", para o organizador) |
 | Resultados do Match | Top 3 com score, preço, culinária, bairro, distância, explicação da IA, ponto de atenção e detalhamento por participante; estado "nenhum elegível" com sugestões aplicáveis |

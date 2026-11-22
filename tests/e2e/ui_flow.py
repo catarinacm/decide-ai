@@ -67,10 +67,11 @@ def flow_demo(page: Page, base: str, r: Report, tag: str = "A"):
     with r.step(f"{tag}1. Página inicial abre e explica a proposta"):
         page.goto(base, timeout=WAKE_TIMEOUT)
         expect(page.get_by_role("heading", name=re.compile("Onde todo mundo"))).to_be_visible()
+        expect(page.get_by_role("link", name="Criar encontro")).to_have_count(1)  # só o botão principal
         expect(page.get_by_text("Protótipo de case")).to_be_visible()
         shot(page, f"{tag.lower()}1_inicio")
-    with r.step(f"{tag}2. Experimentar agora abre um grupo com 4 pessoas prontas"):
-        page.get_by_role("button", name="Experimentar agora").click()
+    with r.step(f"{tag}2. Exemplo pronto abre um grupo com 4 pessoas"):
+        page.get_by_role("link", name="ou veja um exemplo pronto").click()
         page.wait_for_url(re.compile(r"/g/.+/preferencias"), timeout=WAKE_TIMEOUT)
         expect(page.get_by_text("4 de 4 com preferências")).to_be_visible(timeout=WAKE_TIMEOUT)
         shot(page, f"{tag.lower()}2_preferencias_demo")
